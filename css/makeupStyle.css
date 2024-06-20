@@ -26,16 +26,17 @@ html{
   background: #f4f1f2;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  /* gap: 1rem; */
 }
 
 .category .categ{
   margin: 1.2rem 2.2rem;
+  width: 10%;
 }
-/* .categ a img{
-  height: auto; 
-  max-width: 100%;
-} */
+.categ a img{
+  width: 100%;
+}
 
 .category .categ a{
   text-align: none;
@@ -52,6 +53,10 @@ html{
 
  .category .categ a:hover{
   color: #f65a64;
+}
+
+.categ{
+    /* width: 20%; */
 }
 
 /* #############################  products section styling ############################# */
