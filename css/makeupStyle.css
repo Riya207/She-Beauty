@@ -37,7 +37,7 @@ html{
    text-transform: uppercase;
    text-align: center;
    padding-top: 3rem;
-   letter-spacing: 0.2rem;
+   letter-spacing: 0.1rem;
    color:#352d2d;
 }
 .category .categ{
@@ -280,6 +280,7 @@ i.drop{
   background: #7B7BFF;
   border-radius: 0.8rem;
   color:#fff;
+  cursor: pointer;
 }
 .product-content .btn-container .add-to-cart:hover{
   background: #7b7bffa7;

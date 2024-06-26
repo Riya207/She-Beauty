@@ -4,8 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        #category{
+            background: #f3f1f2;
+            padding-bottom: 2rem;
+        }
+        #category h2{
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            /* padding: 3rem 0; */
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+        .categ-wrapper{
+            margin:auto;
+            justify-content: center;
+            display:flex;
+            flex-wrap: nowrap;
+        }
+        .categ{
+            width:12%;
+            margin: 1.2rem 2rem;
+            text-align: center;
+        }
+        .categ a img{
+            width: 100%;
+        }
+        .categ  p{
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 0.4rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgb(48, 48, 48);
+        }
+        .categ-wrapper .categ a:hover p{
+            color: #f65a64;
+        }
+        </style>
 </head>
 <body>
-    
+    <section  id="category">
+        <h2 class="categ-title">Categories</h2>
+        <div class="categ-wrapper">
+            
+            <div class="categ">
+                <a href="#">
+                    <img src="./image/makeup.png" alt="eye-category">
+                    <p>Makeup</p>
+                </a>
+            </div>
+            <div class="categ">
+                <a href="#"><img src="./image/skin.png" alt="face-category">
+                    <p>Skin</p>
+                </a>
+            </div>
+            <div class="categ">
+                <a href="#"><img src="./image/hair.png" alt="lip makeup category">
+                    <p>Hair</p>
+                </a>
+            </div>
+            <div class="categ">
+                <a href="#"><img src="./image/body.png" alt="nails makeup category">
+                    <p>Body</p>
+                </a>
+            </div>
+            <div class="categ">
+                <a href="#"><img src="./image/brands.png" alt="nails makeup category">
+                    <p>Brands</p>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

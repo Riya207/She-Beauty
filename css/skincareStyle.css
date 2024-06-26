@@ -280,6 +280,7 @@ i.drop{
   background: #7B7BFF;
   border-radius: 0.8rem;
   color:#fff;
+  cursor: pointer;
 }
 .product-content .btn-container .add-to-cart:hover{
   background: #7b7bffa7;
