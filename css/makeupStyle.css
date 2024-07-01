@@ -22,7 +22,7 @@ html{
   margin: 0 auto;
 }
 .category{
-  background: #f3f1f2;
+  background: #FAF9F6;
 }
 
 .categ-wrapper{
@@ -46,6 +46,10 @@ html{
 }
 .categ a img{
   width: 100%;
+}
+.categ a img:hover{
+  box-shadow: 5px 5px 20px #888888;
+  border-radius: 50%;
 }
 
 .category .categ a{
@@ -223,6 +227,7 @@ i.drop{
 }
 .products-container .product{
   /* display: inline; */
+  position:relative;
   margin: 8px;
   width: 250px;
   border-radius: 0.8rem;
@@ -235,6 +240,7 @@ i.drop{
 }
 .product .product-content{
   margin: 4px;
+  padding-bottom: 50px;
 }
 .product-content .brand-name h3{
   text-transform: uppercase;
@@ -271,6 +277,12 @@ i.drop{
 .product-content .btn-container{
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 2px;
+  background: #fff;
 }
 
 .product-content .btn-container .add-to-cart{
