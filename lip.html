@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lips-Category</title>
+    <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/eyes.css">
+    <script src="./makeupjs.js" defer></script>
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("she-website-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("she-website-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+</head>
+
+<body>
+    <section class="banner">
+        <img src="./image/lips-banner.png" alt="a banner of lips category">
+    </section>
+
+    <div class="container">
+        <div class="link-section">
+            <div class="prev-link"><a href="./makeup.html">Makeup ></a></div>
+            <div class="curr-link"><a href="./lip.html">Lips</a></div>
+        </div>
+        <section class="main-section">
+            <div class="main filter">
+
+
+                <div class="filter-container">
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleContent('category')">
+                            <span>Filter by Category</span>
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content" id="category">
+                            <label>
+                                <span>MakeUp</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Skin</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Hair</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Body</span>
+                                <input type="checkbox" checked>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleContent('brands')">
+                            <span>Filter by Brands</span>
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content" id="brands">
+                            <label>
+                                <span>L.A. Girl</span>
+                                <input type="checkbox" checked>
+                            </label>
+                            <label>
+                                <span>Mac</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Lakme</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Renee</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Maybelline</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Essence</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Sugar</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Plum</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Loreal Paris</span>
+                                <input type="checkbox">
+                            </label>
+                            <label>
+                                <span>Elf</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleContent('price')">
+                            <span>Filter by Price</span>
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content" id="price">
+                            <div class="price-range">
+                                <span>NPR. 200</span>
+                                <span>NPR. 2000</span>
+                            </div>
+                            <input type="range" class="range" min="200" max="2000" value="50">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <div class="main-products"></div> -->
+            <div class="products">
+                <div class="products-header">
+                    <div class="left">
+                        <h2>Lips<p>(7 items)</p>
+                        </h2>
+                    </div>
+                    <div class="right">
+                        <div class="sort-header">
+                            <span>Sort By</span>
+                          
+                                <span>
+    
+                                    <!-- <input type="checkbox" name="" id="toggle"> -->
+                                    <i class="fa-solid fa-chevron-down drop"></i>
+                                </span>
+    
+                            
+    
+                        </div>
+    
+                        <ul class="sort-price">
+                            <li class="low-to-high">Price: Low to High</li>
+                            <li class="high-to-low">Price: High to Low</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="products-container">
+                    <div class="product product1">
+                        <div class="img-holder"><img src="./image/lip1.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Plum</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.7/5</span>
+                                <span class="count">(5)</span>
+                            </div>
+                            <div class="price"><p>NPR. 1028</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="product product2">
+                        <div class="img-holder"><img src="./image/lip2.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Plum</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi repellat!</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 494</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="product product3">
+                        <div class="img-holder"><img src="./image/lip3.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Dove</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="product product4">
+                        <div class="img-holder"><img src="./image/lip4.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Dove</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 322</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="product product5">
+                        <div class="img-holder"><img src="./image/lip1.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Mamaearth</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 532</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="view-more">
+                    <button class="btn">View More</button>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        </script>
+        
+            <div she-website-html="./footer.html"></div>
+            
+            <script>
+                includeHTML();
+                </script>
+</body>
+
+</html>
