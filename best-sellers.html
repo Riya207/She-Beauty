@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best-sellers</title>
+    <!-- linking swiperjs css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        #best-sellers{
+            /* border: 2px solid green; */
+            background: #f5f3f8;
+            padding-bottom: 5rem;
+        }
+        h2{
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            padding-top: 4rem;
+            padding-bottom: 3rem;
+        }
+        .container{
+            width: 90%;
+            margin: 0 auto;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider-wrapper{
+            /* width: 86%; */
+            margin: 0 auto;
+            /* overflow:hidden; */
+            margin: 0 70px 55px;
+        }
+        .product{
+            background: #fff;
+            border:3px solid #CCCCFF;
+            border-radius: 8px;
+            max-width: 300px;
+            max-height: 400px;
+            margin: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            padding-bottom: 50px;
+        }
+        .img-holder{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            max-height: 200px;
+            max-width: 300px;
+        }
+        .img-holder img{
+            max-height: 200px;
+            max-width: 300px;
+            object-fit: cover;
+           
+        }
+        .img-holder .ad{
+            display: flex;
+            justify-content: space-between;
+         
+        }
+        .ad p{
+            display: block;
+        }
+        .ad .bestseller{
+            position:absolute;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: #FFD700;
+            padding: 1.2rem 1.4rem;
+            border-radius: 2rem;
+            color:black;
+            top: 0%;
+            left:1%;
+            opacity: 0.65;
+        }
+        .ad .offer{
+            font-size: 2rem;
+            padding: 1.6rem 0.6rem;
+            background: #D51A1A;
+            color:#fff;
+            border-radius: 98px;
+            position:absolute;
+            top: 0%;
+            right:2%;
+            
+        }
+        .product-content{
+            /* border: 2px solid purple; */
+            padding: 10px 0px 10px 10px;
+            max-height: 300px;
+            max-width: 300px;
+        }
+        .brand-name h3{
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color:#7B7BFF;
+            padding-bottom: 0.6rem;
+        }
+        .item-detail p{
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            padding-bottom: 0.6rem;
+        }
+        .rating{
+            font-size: 1.3rem;
+            padding-bottom: 0.6rem;
+        }
+        .rating i{
+            color:#FFD700;
+        }
+        .rating .avg-rating{
+            padding: 0.2rem;
+            font-weight: 600;
+        }
+        .price p{
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #B21CE6;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 10px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 90%;
+            padding: 0px;
+        }
+        .btn-container .add-to-cart{
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 0.8rem 6.6rem;
+            background: #7B7BFF;
+            border-radius: 0.8rem;
+            color:#fff;
+            cursor: pointer;
+        }
+        .btn-container .add-to-cart a{
+            color: #fff;
+        }
+        .container .swiper-pagination{
+            height: 20px;
+        }
+        .container .swiper-slide-button{
+            color: #7B7BFF;
+            margin-top: -50px;
+            border-radius: 50%;
+            transition: 2s ease;
+        }
+        .container .swiper-slide-button:hover{
+            color: #2d2d59;
+        }
+        @media (max-width: 768px){
+            .slider-wrapper{
+                margin: 0 10 40px;
+            }
+            .container .swiper-slide-button{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="best-sellers">
+        <h2>Best sellers</h2>
+        <div class="container swiper">
+            <div class="slider-wrapper swiper-wrapper">
+                <div class="product product1 swiper-slide">
+                    <div>
+                        <div class="img-holder">
+                            <img src="./image/sunscream.png" alt="highly selling sunscream">
+                            <div class="ad"><p class="bestseller">Bestseller</p>
+                                <p class="offer">50% off</p></div>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Fix Derma</h3></div>
+                            <div class="item-detail"><p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart"><a href="#">Add to Cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product2 swiper-slide">
+                    <div>
+                        <div class="img-holder">
+                            <img src="./image/mproduct1.png" alt="highly selling sunscream">
+                            <div class="ad"><p class="bestseller">Bestseller</p>
+                                <p class="offer">50% off</p></div>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Fix Derma</h3></div>
+                            <div class="item-detail"><p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart"><a href="#">Add to Cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product3 swiper-slide">
+                    <div>
+                        <div class="img-holder">
+                            <img src="./image/sunscream.png" alt="highly selling sunscream">
+                            <div class="ad"><p class="bestseller">Bestseller</p>
+                                <p class="offer">50% off</p></div>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Fix Derma</h3></div>
+                            <div class="item-detail"><p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart"><a href="#">Add to Cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product4 swiper-slide">
+                    <div>
+                        <div class="img-holder">
+                            <img src="./image/mproduct1.png" alt="highly selling sunscream">
+                            <div class="ad"><p class="bestseller">Bestseller</p>
+                                <p class="offer">50% off</p></div>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Fix Derma</h3></div>
+                            <div class="item-detail"><p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart"><a href="#">Add to Cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product5 swiper-slide">
+                    <div>
+                        <div class="img-holder">
+                            <img src="./image/sunscream.png" alt="highly selling sunscream">
+                            <div class="ad"><p class="bestseller">Bestseller</p>
+                                <p class="offer">50% off</p></div>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Fix Derma</h3></div>
+                            <div class="item-detail"><p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart"><a href="#">Add to Cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product product6 swiper-slide">
+                    <div>
+                        <div class="img-holder">
+                            <img src="./image/mproduct1.png" alt="highly selling sunscream">
+                            <div class="ad"><p class="bestseller">Bestseller</p>
+                                <p class="offer">50% off</p></div>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Fix Derma</h3></div>
+                            <div class="item-detail"><p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 200</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart"><a href="#">Add to Cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Linking swiperjs script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="./script/best-seller-script.js"></script>
+</body>
+</html>
