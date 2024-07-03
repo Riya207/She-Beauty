@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nails-Category</title>
+    <title>Hair-Category</title>
     <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/eyes.css">
-    <script src="./makeupjs.js" defer></script>
+    <link rel="stylesheet" href="../css/makeupStyle.css">
+    <script src="../script/makeupjs.js" defer></script>
     <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
@@ -41,14 +41,33 @@
 
 <body>
     <section class="banner">
-        <img src="./image/nails-banner.png" alt="a banner of face category">
+        <img src="../image/hair-banner.png" alt="a banner of hair category">
+    </section>
+
+    <section class="category">
+        <h2 class="categ-title">Categories</h2>
+        <div class="categ-wrapper">
+            
+            <div class="categ">
+                <a href="./shampoo.html">
+                    <img src="../image/shampoo.png" alt="shampoo-category">
+                    <p>Shampoo</p>
+                </a>
+            </div>
+            <div class="categ">
+                <a href="./hair-oil.html"><img src="../image/hair oil.png" alt="hair oil-category">
+                    <p>Hair oil</p>
+                </a>
+            </div>
+            <div class="categ">
+                <a href="./conditioner.html"><img src="../image/conditioner.png" alt="conditioner category">
+                    <p>Conditioner</p>
+                </a>
+            </div>
+        </div>
     </section>
 
     <div class="container">
-        <div class="link-section">
-            <div class="prev-link"><a href="./makeup.html">Makeup ></a></div>
-            <div class="curr-link"><a href="./nails.html">Nails</a></div>
-        </div>
         <section class="main-section">
             <div class="main filter">
 
@@ -61,20 +80,16 @@
                         </div>
                         <div class="filter-content" id="category">
                             <label>
-                                <span>MakeUp</span>
+                                <span>Shampoo</span>
                                 <input type="checkbox">
                             </label>
                             <label>
-                                <span>Skin</span>
+                                <span>Hair oil</span>
                                 <input type="checkbox">
                             </label>
                             <label>
-                                <span>Hair</span>
+                                <span>Conditioner</span>
                                 <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Body</span>
-                                <input type="checkbox" checked>
                             </label>
                         </div>
                     </div>
@@ -147,7 +162,7 @@
             <div class="products">
                 <div class="products-header">
                     <div class="left">
-                        <h2>Nails<p>(7 items)</p>
+                        <h2>Hair<p>(20 items)</p>
                         </h2>
                     </div>
                     <div class="right">
@@ -172,7 +187,7 @@
                 </div>
                 <div class="products-container">
                     <div class="product product1">
-                        <div class="img-holder"><img src="./image/eye1.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/hproduct1.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Plum</h3></div>
                             <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
@@ -190,7 +205,7 @@
                        
                     </div>
                     <div class="product product2">
-                        <div class="img-holder"><img src="./image/face1.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/hproduct2.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Plum</h3></div>
                             <div class="item-detail"><p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi repellat!</p></div>
@@ -208,7 +223,7 @@
                        
                     </div>
                     <div class="product product3">
-                        <div class="img-holder"><img src="./image/face2.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/hproduct3.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Dove</h3></div>
                             <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
@@ -227,7 +242,7 @@
                     </div>
 
                     <div class="product product4">
-                        <div class="img-holder"><img src="./image/face1.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/hproduct4.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Dove</h3></div>
                             <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
@@ -245,7 +260,7 @@
                        
                     </div>
                     <div class="product product5">
-                        <div class="img-holder"><img src="./image/face2.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/hproduct5.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Mamaearth</h3></div>
                             <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
@@ -262,6 +277,79 @@
                         </div>
                        
                     </div>
+                    <div class="product product6">
+                        <div class="img-holder"><img src="../image/hproduct6.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Plum</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 570</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="product product7">
+                        <div class="img-holder"><img src="../image/hproduct7.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Garnier</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 304</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="product product8">
+                        <div class="img-holder"><img src="../image/hproduct8.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Parachute</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 155</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div> 
+                    <div class="product product9">
+                        <div class="img-holder"><img src="../image/hproduct9.png" alt=""><p class="offer"></p></div>
+                        <div class="product-content">
+                            <div class="brand-name"><h3>Astaberry</h3></div>
+                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">4.5/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price"><p>NPR. 250</p></div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                       
+                    </div> 
                 </div>
                 <div class="view-more">
                     <button class="btn">View More</button>
@@ -281,7 +369,7 @@
         }
         </script>
         
-            <div she-website-html="./footer.html"></div>
+            <div she-website-html="../footer.html"></div>
             
             <script>
                 includeHTML();
