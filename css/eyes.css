@@ -24,7 +24,7 @@ html{
 
 .container .link-section {
     display: flex;
-    margin: 2rem auto;
+    margin: 3rem auto;
 }
 .prev-link, .curr-link {
     margin-right: 10px; 
@@ -209,7 +209,8 @@ i.drop{
 }
 .product .img-holder img{
   width: 100%;
-  height: 100%;
+  height: 196px;
+  object-fit: contain;
 }
 .product .product-content{
   margin: 4px;
