@@ -82,6 +82,7 @@
         .container .body {
             margin: 1.2rem 2.2rem;
         }
+
         .products {
             display: flex;
             flex-direction: column;
@@ -100,6 +101,7 @@
             font-size: 3rem;
             color: #8819FB;
         }
+
         .sort-header {
             border-radius: 8px;
             border: 2px solid #ccd2ff;
@@ -151,6 +153,104 @@
             background: #ccd0f0;
             border-radius: 8px;
         }
+
+        /* ################################# CART-CONTAINER-STYLING ################################### */
+
+        .products-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .products-container .product {
+            /* display: inline; */
+            position: relative;
+            margin: 8px;
+            width: 250px;
+            border-radius: 0.8rem;
+            border: 2px solid #CCCCFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+            ;
+        }
+
+        .product .img-holder img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product .product-content {
+            margin: 4px;
+            padding-bottom: 50px;
+        }
+
+        .product-content .brand-name h3 {
+            text-transform: uppercase;
+            color: #7B7BFF;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        /* .product-content .item-detail p {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .product-content .rating {
+            margin: 4px 0;
+        }
+
+        .product-content .rating i {
+            color: rgba(255, 255, 0, 0.808);
+        }
+
+        .product-content .rating span {
+            padding-left: 5px;
+        }
+
+        .product-content .rating .avg-rating {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .product-content .rating .count {
+            font-size: 1rem;
+        }
+
+        .product-content .price p {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #B21CE6;
+            margin: 4px 0;
+        }
+
+        .product-content .btn-container {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 2px;
+            background: #fff;
+        }
+
+        .product-content .btn-container .add-to-cart {
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 0.4em 4.6em;
+            background: #7B7BFF;
+            border-radius: 0.8rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .product-content .btn-container .add-to-cart:hover {
+            background: #7b7bffa7;
+        }
+
+         */
+        
     </style>
 </head>
 
@@ -219,15 +319,15 @@
                         <h3>Himalaya</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p>REFRESHING & CLARIFYING TONER</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">4.7/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 759</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -242,19 +342,18 @@
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>MAC cosmetics</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>GENTLY OFF WIPES + MICELLER WATER/MINI MAC</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">3/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 2400</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -269,19 +368,18 @@
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>Mamaearth</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>MAMAEARTH GLOW HYDRATING CONCEALER-6ML</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">4.7/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 759</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -296,19 +394,18 @@
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>Renee</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>REENEE PINK ROMANCE BODY MIST-150ML</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">3.5/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 650</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -323,19 +420,18 @@
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>Astaberry</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>ASTABERRY UV GUARD SUN PROTECTION CREME SPF 40PA+++</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">3/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 468</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -350,19 +446,18 @@
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>Dove</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>DOVE HAIRFALL RESCUE SHAMPOO 325ML</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">4.7/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 322</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -377,19 +472,19 @@
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>Mamaearth</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>MAMAEARTH UBTAN SUSNSCREEN BODY LOTION SPF 30 WITH TURMERIC AND SAFFRON FOR GLOWING SKIN
+                            300ML</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">4.7/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 575</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
@@ -399,32 +494,134 @@
 
             </div>
             <div class="product product8">
-                <div class="img-holder"><img src="./image/cocabutter.png" alt="">
+                <div class="img-holder"><img src="./image/L.A BROW.png" alt="">
                     <p class="offer"></p>
                 </div>
                 <div class="product-content">
                     <div class="brand-name">
-                        <h3>Himalaya</h3>
+                        <h3>L.A Girl</h3>
                     </div>
                     <div class="item-detail">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing illum rem recusandae magni animi
-                            repellat!</p>
+                        <p>L.A. GIRL BROW POMADE</p>
                     </div>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
-                        <span class="avg-rating">4.5/5</span>
+                        <span class="avg-rating">4.7/5</span>
                         <span class="count">(6)</span>
                     </div>
                     <div class="price">
-                        <p>NPR. 200</p>
+                        <p>NPR. 1000</p>
                     </div>
                     <div class="btn-container">
                         <i class="fa-regular fa-heart fa-3x"></i>
                         <div class="add-to-cart">Add to Cart</div>
                     </div>
                 </div>
-
             </div>
+
+                <div class="product product9">
+                    <div class="img-holder"><img src="./image/Cerave cleanser.png" alt="">
+                        <p class="offer"></p>
+                    </div>
+                    <div class="product-content">
+                        <div class="brand-name">
+                            <h3>CeraVe</h3>
+                        </div>
+                        <div class="item-detail">
+                            <p>CERAVE FOAMING FACIAL CLEANSER - 87ML</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="avg-rating">4.7/5</span>
+                            <span class="count">(6)</span>
+                        </div>
+                        <div class="price">
+                            <p>NPR. 900</p>
+                        </div>
+                        <div class="btn-container">
+                            <i class="fa-regular fa-heart fa-3x"></i>
+                            <div class="add-to-cart">Add to Cart</div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="product product10">
+                        <div class="img-holder"><img src="./image/plum conditioner.png" alt="">
+                            <p class="offer"></p>
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name">
+                                <h3>Plum</h3>
+                            </div>
+                            <div class="item-detail">
+                                <p>PLUM AVOCADO & ARGAN FRIZZ CONTROL CONDITIONER 175ML</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="avg-rating">3/5</span>
+                                <span class="count">(6)</span>
+                            </div>
+                            <div class="price">
+                                <p>NPR. 570</p>
+                            </div>
+                            <div class="btn-container">
+                                <i class="fa-regular fa-heart fa-3x"></i>
+                                <div class="add-to-cart">Add to Cart</div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="product product11">
+                            <div class="img-holder"><img src="./image/maybelline lipstick.png" alt="">
+                                <p class="offer"></p>
+                            </div>
+                            <div class="product-content">
+                                <div class="brand-name">
+                                    <h3>Maybelline</h3>
+                                </div>
+                                <div class="item-detail">
+                                    <p>MAYBELLINE COLOR SENSATIONAL- THE LIPSTICK</p>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="avg-rating">4.7/5</span>
+                                    <span class="count">(6)</span>
+                                </div>
+                                <div class="price">
+                                    <p>NPR. 1,130</p>
+                                </div>
+                                <div class="btn-container">
+                                    <i class="fa-regular fa-heart fa-3x"></i>
+                                    <div class="add-to-cart">Add to Cart</div>
+                                </div>
+                            </div>
+                       </div>
+
+                            <div class="product product12">
+                                <div class="img-holder"><img src="./image/Jasmine oil.png" alt="">
+                                    <p class="offer"></p>
+                                </div>
+                                <div class="product-content">
+                                    <div class="brand-name">
+                                        <h3>Parachute</h3>
+                                    </div>
+                                    <div class="item-detail">
+                                        <p>PARACHUTE ADVANCED JASMINE HAIR OIL- 190ML</p>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="avg-rating">4.5/5</span>
+                                        <span class="count">(6)</span>
+                                    </div>
+                                    <div class="price">
+                                        <p>NPR. 155</p>
+                                    </div>
+                                    <div class="btn-container">
+                                        <i class="fa-regular fa-heart fa-3x"></i>
+                                        <div class="add-to-cart">Add to Cart</div>
+                                    </div>
+                                </div>
+                            </div>
 
 </body>
 
