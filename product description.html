@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/product-page.css">
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("she-website-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("she-website-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="product-container">
+            <div class="product-image">
+                <img src="./image/powder1.png" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <div class="brand-name">
+                    <p>Note</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h2>NOTE LOOSE POWDER</h2>
+                <p class="rating"><i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i> 3/5 | 6 Ratings and 0 Reviews</p>
+                <p class="stock">In Stock</p>
+                <div class="color-options" >
+                    <label for="color-names">Color:</label>
+                    <select name="color-names" id="color-names" style="width:150px;">
+                        <option value="stardust">Stardust</option>
+                      <option value="honeywarm">Honey Warm</option>
+                      <option value="caramellake">Caramel Lake</option>
+                    </select>
+                </div>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <div class="price-container">
+
+                    <p class="price">NPR. 200 <span>(Inclusive of all taxes)</span></p>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'Description')">Description</button>
+                <button class="tab-button" onclick="openTab(event, 'Reviews')">Ratings and Reviews</button>
+            </div>
+            
+            <div id="Description" class="tab-content active">
+                <h3>Product Details</h3>
+                <ul>
+                    <li>Interim backwards marketing backwards lot wanted food.</li>
+                    <li>Recap monday parking discussions social requirements dog post launch.</li>
+                    <li>Last giant chime illustration live vec keywords dear functional.</li>
+                    <li>Performance banner backwards run eco-system.</li>
+                    <li>Cause that's boil problem hit pretend after looking overflow post.</li>
+                </ul>
+            </div>
+            
+            <div id="Reviews" class="tab-content">
+                <h3>Ratings and Reviews</h3>
+                <p>No reviews yet.</p>
+            </div>
+        </div>
+    
+    </div>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        </script>
+        
+            <div she-website-html="../footer.html"></div>
+            
+            <script>
+                includeHTML();
+                </script>
+    <script src="./script/product-page.js"></script>
+</body>
+</html>
