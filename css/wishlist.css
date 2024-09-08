@@ -1,0 +1,182 @@
+body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      
+      header {
+          background-color: #fff;
+          border-bottom: 1px solid #ddd;
+          padding: 10px 0;
+      }
+      
+      .top-nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 20px;
+      }
+      
+      .logo h1 {
+          font-size: 28px;
+          color: #6A2C91;
+      }
+      
+      .search-bar input {
+          width: 300px;
+          padding: 8px;
+      }
+      
+      .user-options a {
+          margin-left: 20px;
+          text-decoration: none;
+          color: #333;
+      }
+      
+      nav ul {
+          display: flex;
+          justify-content: center;
+          padding: 10px 0;
+          margin: 0;
+          list-style: none;
+          background-color: #f8f8f8;
+      }
+      
+      nav ul li a {
+          text-decoration: none;
+          padding: 10px 20px;
+          color: #333;
+      }
+      
+      .profile-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          background-color: #d8b2f7;
+      }
+      
+      .profile-info {
+          display: flex;
+          align-items: center;
+      }
+      
+      .profile-pic img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin-right: 20px;
+      }
+      
+      .profile-details h2 {
+          margin: 0;
+          font-size: 24px;
+      }
+      
+      .profile-details p {
+          margin: 0;
+      }
+      .membership-card {
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          max-width: 300px;
+          text-align: center;
+      }
+      
+      .icon img {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          color: #d63384;
+      }
+      
+      .membership-details {
+          text-align: left;
+      }
+      
+      .membership-number {
+          font-size: 16px;
+          font-weight: bold;
+          color: #000;
+          margin: 0;
+      }
+      
+      .current-points {
+          font-size: 14px;
+          color: #555;
+          margin: 5px 0 0 0;
+      }
+      .account-section {
+          display: flex;
+          padding: 20px;
+      }
+      
+      .account-sidebar {
+          width: 25%;
+          padding-right: 20px;
+      }
+      
+      .account-sidebar ul {
+          list-style: none;
+          padding: 0;
+      }
+      
+      .account-sidebar ul li a {
+          display: block;
+          padding: 10px;
+          margin-bottom: 10px;
+          text-decoration: none;
+          color: #333;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          background-color: #f9f9f9;
+      }
+      
+    .main-content {
+        flex: 1;
+        display: flex;
+        justify-content: center; 
+        align-items: flex-start;
+        padding-top: 0px;       
+        background-color: #ffffff;
+    }
+    
+    .main-content h2{
+        margin-top: 0;
+          margin-bottom: 20px;
+    }
+
+    .wishlist {
+        text-align: center;
+    }
+    
+    .wishlist-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    
+    .message {
+        color: red;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .continue-btn {
+        background-color: #a291f3;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    .continue-btn:hover {
+        background-color: #8a7ad3;
+    }
