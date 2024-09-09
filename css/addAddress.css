@@ -149,34 +149,34 @@ body {
           background-color: #f9f9f9;
       }
       
-      .account-details {
+      .address-details {
           width: 50%;
           padding-left: 20px;
           border-left: 1px solid #ddd;
       }
       
-      .account-details h2 {
+      .address-details h2 {
           margin-top: 0;
           margin-bottom: 20px;
       }
       
-      .account-details form {
+      .address-details form {
           display: grid;
           gap: 15px;
       }
       
-      .account-details label {
+      .address-details label {
           font-weight: bold;
       }
       
-      .account-details input {
+      .address-details input {
           padding: 10px;
           border: 1px solid #ddd;
           border-radius: 5px;
           width: 100%;
       }
       
-      .account-details button {
+      .address-details button {
           padding: 12px 20px;
           background-color: #7B7BFF;
           color: white;
@@ -185,26 +185,36 @@ body {
           border-radius: 4px;
           width: 150px;
       }
-      
-      .delete-account {
-          margin-top: 40px;
-          border: 1px solid #ddd;
-          padding: 20px;
-          border-radius: 8px;
-          background-color: #f9f9f9;
+      label {
+          display: block;
+          margin-bottom: 8px;
+          font-size: 16px;
+          color: #555;
       }
       
-      .delete-account h3 {
-          margin-top: 0;
-      }
-      
-      .delete-btn {
-          padding: 10px 20px;
-          background-color: #ff4c4c;
-          color: white;
-          border: none;
-          cursor: pointer;
+      select {
+          width: 106%;
+          padding: 10px;
+          font-size: 16px;
+          color: #555;
+          border: 1px solid #ccc;
           border-radius: 4px;
+          background-color: #fff;
+          appearance: none;
+          cursor: pointer;
       }
       
+      select:focus {
+          border-color: #aaa;
+          outline: none;
+      }
       
+      option {
+          padding: 10px;
+          font-size: 16px;
+          color: #555;
+          background-color: #fff;
+      }
+      select option [value=""]{
+          color: #bbb7b7;
+      }
