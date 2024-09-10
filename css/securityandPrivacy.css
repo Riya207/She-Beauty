@@ -201,6 +201,8 @@ body {
       .security-details label {
           font-weight: bold;
           color: #413E3E;
+          display: block;
+          
       }
       
       .security-details input {
@@ -209,6 +211,19 @@ body {
           border-radius: 5px;
           width: 100%;
           color: #666060;
+          font-size: 16px;
+          box-sizing: border-box;
+          position: relative;
+      }
+      .security-details i.fa-eye-slash{
+        position: absolute;
+        right: 15px;
+        top: calc(50% - 8px);
+        cursor: pointer;
+        color: #666060;
+      }
+      .security-details .input-wrapper{
+        position: relative;
       }
       
       .security-details button {
@@ -218,10 +233,9 @@ body {
           border: none;
           cursor: pointer;
           border-radius: 4px;
-          width: 150px;
+          width: 180px;
           
       }
-      .account-details button,edit-profile-button {
+      .security-details button,edit-profile-button {
         font-size: 16px;
       }
-      
