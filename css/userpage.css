@@ -115,46 +115,17 @@ body {
           color: #555;
           margin: 5px 0 0 0;
       }
+      .user-container{
+        
+        width :90%;
+        margin: 0 auto;
+      }
       .account-section {
           display: flex;
           padding: 20px;
+          /* margin-left: 40px; */
       }
-      .account-box {
-        width: 300px;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: white;
-        font-family: "Roboto", sans-serif;
-        margin-right: 20px;
-        height: 100%;
-    }
-    
-    .account-box h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 5px;
-        padding-left: 30px;
-        margin-top: 5px;
-        color: #1F1D1D;
-    }
-    
-    .account-box ul {
-        list-style-type: none;
-        padding: 0;
-        flex-grow: 1;
-    }
-    
-    .account-box ul li {
-        margin-bottom: 10px;
-    }
-    
-    .account-box ul li a {
-        text-decoration: none;
-        color: #413E3E;
-        display: flex;
-        padding: 20px;
-    }
+      
     .account-box {
       width: 300px;
       padding: 20px;

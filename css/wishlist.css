@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
-          font-family: Arial, sans-serif;
+          font-family: "Roboto", sans-serif;
           margin: 0;
           padding: 0;
           box-sizing: border-box;
@@ -72,11 +73,13 @@ body {
       .profile-details h2 {
           margin: 0;
           font-size: 24px;
+          color: #1F1D1D;
       }
       
       .profile-details p {
           margin: 0;
       }
+      
       .membership-card {
           display: flex;
           align-items: center;
@@ -102,7 +105,7 @@ body {
       .membership-number {
           font-size: 16px;
           font-weight: bold;
-          color: #000;
+          color: #1F1D1D;
           margin: 0;
       }
       
@@ -111,72 +114,119 @@ body {
           color: #555;
           margin: 5px 0 0 0;
       }
+      .user-container{
+        
+        width :90%;
+        margin: 0 auto;
+      }
       .account-section {
           display: flex;
           padding: 20px;
+          
       }
       
-      .account-sidebar {
-          width: 25%;
-          padding-right: 20px;
-      }
+    .account-box {
+      width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      font-family: "Roboto", sans-serif;
+      margin-right: 20px;
+      height: 100%;
+  }
+  
+  .account-box h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      padding-left: 30px;
+      margin-top: 5px;
+      color: #1F1D1D;
+  }
+  
+  .account-box ul {
+      list-style-type: none;
+      padding: 0;
+      flex-grow: 1;
+  }
+  
+  .account-box ul li {
+      margin-bottom: 10px;
+  }
+  
+  .account-box ul li a {
+      text-decoration: none;
+      color: #413E3E;
+      display: flex;
+      align-items: center;
+      padding: 10px 0px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
       
-      .account-sidebar ul {
-          list-style: none;
-          padding: 0;
-      }
+  }
+  
+  .account-box ul li a:hover {
+      background-color: #7B7BFF;
+      color: #ffff;
+  }
+  
+  .account-box ul li a.selected {
+      background-color: #d2bcfc;
+      color: white;
+  }
+  
+  .account-box ul li a::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-size: contain;
+  }
+  .account-box ul li i{
+      margin-right: 10px;
+  }
       
-      .account-sidebar ul li a {
-          display: block;
-          padding: 10px;
-          margin-bottom: 10px;
-          text-decoration: none;
-          color: #333;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          background-color: #f9f9f9;
-      }
-      
-    .main-content {
-        flex: 1;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        padding-top: 0px;       
-        background-color: #ffffff;
-    }
-    
-     h2{
-        margin-top: 0;
-          margin-bottom: 20px;
-    }
+  .main-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+  }
+  .wishlist {
+    padding: 20px; 
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* margin-left: 75px;
+     */
+}
 
-    .wishlist {
-        text-align: center;
-    }
-    
-    .wishlist-icon {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 20px;
-    }
-    
-    .message {
-        color: red;
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    
-    .continue-btn {
-        background-color: #a291f3;
-        color: #fff;
-        border: none;
-        padding: 15px 30px;
-        font-size: 16px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-    
-    .continue-btn:hover {
-        background-color: #8a7ad3;
-    }
+.wishlist-icon {
+    width: 150px;
+    height: 100px;
+}
+
+.message {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.continue-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #7B7BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #7B7BFF;
+}
+
+  

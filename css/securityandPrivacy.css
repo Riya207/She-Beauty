@@ -115,6 +115,12 @@ body {
           margin: 5px 0 0 0;
       }
       
+      .user-container{
+        
+        width :90%;
+        margin: 0 auto;
+      }
+      
       .account-section {
           display: flex;
           padding: 20px;
