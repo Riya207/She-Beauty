@@ -40,7 +40,7 @@
 
   .order-summary{
     /* border: 2px solid #D2D2FF; */
-    max-height: 30rem;
+    max-height: 36rem;
     display: block;
     width: 36%;
     margin: 1rem 0;
@@ -50,6 +50,7 @@
   .order-summary h2{
     margin: 1rem;
     padding-bottom: 1rem;
+    font-size: 2.4rem;
     border-bottom: 2px solid #D2D2FF;
   }
   .order-summary .order{
@@ -89,67 +90,56 @@
   cursor:pointer;
   font-size: 2rem;
   font-weight: bolder;
-  box-shadow: 5px 5px 15px #4e4b4b;
+  box-shadow: 0px 5px 15px #4e4b4b75;
 }
 
 
 
-  /* ============== item box ============= */
-  .cart-items{
-    margin: 1rem;
-    display: flex; 
-    gap:1rem;
-    position: relative;
-    border: 2px solid hotpink;
-  }
-  .cart-items img{
-    display: block;
-    width: 20%;
-  }
+  /* ============== userDetails box ============= */
 
-  .item-details{
+.userDetails{
     display: flex;
-    gap:2rem;
     flex-direction: column;
-  }
-  .item-details .item-name{
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  .item-details .quantity{
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  .cart-items .item-price{
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  .details {
+    margin: 2rem;
+}
+.userDetails .deliver{
     display: flex;
     justify-content: space-between;
-    align-items: center; /* This will vertically align items */
-    width: 100%;
+    font-size: 1.8rem;
+    margin: 1rem 0;
 }
-.cart-items i{
-  position: absolute;
-  right:0%;
-  top:0%;
+.deliver p{
+    display: block;
+    font-weight: 600;
 }
-.cart-items .largeCheckbox{
-  width:3rem;
+.deliver .defaultAddr{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #7B7BFF;
 }
-.item-details .quantity span{
-  display: inline-block;
-  width: 3rem;
-  /* height: 25px; */
-  /* background-color: #eee; */
-  border: 1px solid #D2D2FF;
-  cursor: pointer;
-  padding:0.5rem 1rem ;
+.userDetail p{
+    display: block;
+    font-weight: 600;
 }
-.fa-circle-xmark {
-  cursor: pointer;
-  color: #ff4d4d;
+.userDetails .userDetail{
+    display: flex;
+    font-size: 1.6rem;
+    gap: 1rem;
+    padding: 1rem 0rem;
+    /* margin: 1rem 1rem 0rem 4rem; */
 }
-
-
+.userDetails .edit-btn{
+    margin: 1rem 0rem;
+    display: block;
+    padding: 1rem 4rem;
+    width: 20%;
+    border: none;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #7B7BFF;
+    color:#fff;
+    letter-spacing: 1px;
+    border-radius: 1rem;
+    cursor:pointer;
+    box-shadow: 0 6px 15px #5a57579e;
+}

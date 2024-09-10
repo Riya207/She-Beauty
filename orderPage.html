@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Description</title>
     <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/cartPage.css">
+    <link rel="stylesheet" href="./css/orderPage.css">
     <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
@@ -36,27 +36,21 @@
         <div class="cart-box">
 
             <div class="shopping-cart">
-                <h1>Your Shopping Cart</h1>
+                <h1>Billing Details</h1>
 
-                <!-- First cart item -->
-                <div class="cart-items">
-                    <input type="checkbox" id="item1" name="item1" value="" class="largeCheckbox">
-                    <label for="item1"></label>
-                    <img src="./image/bproduct6.png" alt="product picture">
-                    <div class="details">
-                        <div class="item-details">
-                            <p class="item-name">Note Loose Powder</p>
-                            <div class="quantity">
-                              <span class="-"> -</span>
-                              <span> 1</span>
-                              <span class="plus"> +</span>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-circle-xmark fa-2x"></i>
-                        <p class="item-price">NPR. 200</p>
+                <div class="userDetails">
+                    <div class="deliver">
+                        <p class="username">Details: Manu Sapkota</p>
+                        <p class="defaultAddr">Default Address</p>
                     </div>
+                    <div class="userDetail">
+                        <p class="userNumber">9800000000</p>
+                        <p class="userArea">Amarsingh</p>
+                        <p class="userCity">City</p>
+                        <p class="userProvince">Province</p>
+                    </div>
+                    <button class="edit-btn">Edit</button>
                 </div>
-
 
             </div>
 
@@ -68,7 +62,7 @@
                     <p class="order-summary-item">Discount: <span>NPR. 0</span></p>
                     <p class="order-summary-total">Grand Total: <span>NPR. 349</span></p>
                 </div>
-                <button class="checkout-button">Checkout</button>
+                <button class="checkout-button">Place Order</button>
             </div>
         </div>
     </div>
@@ -87,7 +81,5 @@
     </script>
 
     <script src="./script/product-page.js"></script>
-    <script src="./script/cartPage.js"></script>
 </body>
 </html>
-
