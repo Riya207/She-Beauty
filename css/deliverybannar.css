@@ -1,0 +1,66 @@
+* {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+
+      
+      .banner {
+          position: relative;
+          width: 100%;
+          max-width: 1500px;
+          margin: 0 auto;
+          height: auto;
+          
+      }
+
+     
+      .banner img {
+          width: 100%;
+          height: auto; /* Maintain aspect ratio */
+          display: block;
+          object-fit: contain;
+          padding-top: 10px;
+          
+      }
+
+     
+      .order-button {
+          position: absolute;
+          bottom: 10%;
+          left: 25%;
+          /* top: 18%; */
+          
+          transform: translateX(-50%);
+          background-color: #ff4d4d; /* Red background color */
+          color: white;
+          padding: 8px 16px;
+          font-size: 1.5rem; 
+          text-align: center;
+          text-decoration: none;
+          border-radius: 5px;
+          white-space: nowrap;
+      }
+
+      .order-button:hover {
+          background-color: #ff3333; 
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+          .order-button {
+              font-size: 1.2rem; 
+              padding: 6px 12px;
+              bottom: 18%;
+              left: 15%;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .order-button {
+              font-size: 1rem; 
+              padding: 4px 10px;
+              bottom: 20%; 
+              left: 10%;
+          }
+      }
