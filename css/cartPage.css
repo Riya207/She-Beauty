@@ -100,9 +100,9 @@
     display: flex; 
     gap:1rem;
     position: relative;
-    border: 2px solid hotpink;
+    /* border: 2px solid hotpink; */
   }
-  .cart-items img{
+  .cart-items .img{
     display: block;
     width: 20%;
   }
@@ -153,3 +153,79 @@
 }
 
 
+/* ---------------- for empty cart page ----------------------- */
+
+.box{
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.empty-box{
+  border-radius: 50%;
+  background-color: #F0EBF9;
+  padding: 3.6rem;
+}
+.empty-box img{
+  margin-bottom: 1rem;
+}
+.empty-box p{
+  display: block;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-left: 4rem;
+}
+.box button{
+  border:none;
+  margin: 1rem;
+  padding: 1rem 4rem;
+  background-color: #7B7BFF;
+  color:#fff;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #1a1a1a38;
+}
+@media (max-width: 720px) {
+  /* Stack the shopping-cart and order-summary in a column */
+  .cart-box {
+    flex-direction: column; /* Change layout to column */
+  }
+
+  /* Ensure both take full width */
+  .shopping-cart, 
+  .order-summary {
+    width: 100%; /* Full width */
+    margin: 1rem 0; /* Add space between them */
+  }
+
+  /* Reduce box shadows for smaller screens */
+  .shopping-cart, 
+  .order-summary {
+    box-shadow: 2px 2px 8px #4e4b4b;
+  }
+
+  /* Adjust the item details and summary text sizes for smaller screens */
+  .item-details .item-name, 
+  .item-details .quantity, 
+  .cart-items .item-price,
+  .order-summary h2,
+  .order p,
+  .order-summary-item,
+  .order-summary-total {
+    font-size: 1.4rem; /* Reduce text size */
+  }
+
+  /* Adjust checkout button to fit better on smaller screens */
+  .checkout-button {
+    width: 100%; /* Make the button full width */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  /* Adjust empty cart page styling */
+  .box button {
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+  }
+}

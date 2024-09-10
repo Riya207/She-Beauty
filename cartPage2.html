@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Description</title>
+    <title>Cart Page when empty</title>
     <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/cartPage.css">
     <script>
@@ -38,35 +38,30 @@
             <div class="shopping-cart">
                 <h1>Your Shopping Cart</h1>
 
+                
                 <!-- First cart item -->
-                <div class="cart-items">
-                    <input type="checkbox" id="item1" name="item1" value="" class="largeCheckbox">
-                    <label for="item1"></label>
-                    <img class="img" src="./image/bproduct6.png" alt="product picture">
-                    <div class="details">
-                        <div class="item-details">
-                            <p class="item-name">Note Loose Powder</p>
-                            <div class="quantity">
-                              <span class="-"> -</span>
-                              <span> 1</span>
-                              <span class="plus"> +</span>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-circle-xmark fa-2x"></i>
-                        <p class="item-price">NPR. 200</p>
+                
+                <div class="box">
+
+                    <div class="empty-box">
+                        <img src="./image/emptycart.png" alt="">
+                        <p>No items in cart</p>
                     </div>
+                    <button>Go to shop</button>
+
                 </div>
 
+                <!-- ---- finish ----- -->
 
             </div>
 
             <div class="order-summary">
                 <h2>Order Summary</h2>
                 <div class="order">
-                    <p class="order-summary-item">Total: <span>NPR. 200</span></p>
-                    <p class="order-summary-item">Delivery Charge: <span>NPR. 149</span></p>
+                    <p class="order-summary-item">Total: <span>NPR. 0</span></p>
+                    <p class="order-summary-item">Delivery Charge: <span>NPR. 0</span></p>
                     <p class="order-summary-item">Discount: <span>NPR. 0</span></p>
-                    <p class="order-summary-total">Grand Total: <span>NPR. 349</span></p>
+                    <p class="order-summary-total">Grand Total: <span>NPR. 0</span></p>
                 </div>
                 <button class="checkout-button">Checkout</button>
             </div>

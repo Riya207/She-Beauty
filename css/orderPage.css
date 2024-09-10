@@ -143,3 +143,96 @@
     cursor:pointer;
     box-shadow: 0 6px 15px #5a57579e;
 }
+
+/* ------------------- for payment selection ----------------------- */
+
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.payment-container{
+  text-align: center;
+}
+.payment-container .paymentName{
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+img.option {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  transition: border-color 0.3s;
+  border: 1.4px solid #D2D2FF;
+}
+
+img.option.selected {
+  border:none;
+  box-shadow: 0 5px 15px #2a2929a7;
+}
+
+#submit-btn {
+  margin: 20px auto;  /* Center the button horizontally */
+  display: block;      /* Ensure it's treated as a block element */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: not-allowed;
+  background-color: rgba(169, 162, 195, 0.73);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#submit-btn.enabled {
+  background-color: #7B7BFF;
+  cursor: pointer;
+}
+
+/* ------------ success message -------------------- */
+
+
+/* Add blur class to blur the background */
+.blur-background {
+  filter: blur(2px);
+}
+
+/* Success message - centered and on top of everything */
+.success {
+  display: none; /* Initially hidden */
+  position: fixed; /* Position it in the center of the screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.6rem;
+  color: green;
+  font-weight: bold;
+  z-index: 9999; /* Ensure it's on top of everything */
+  background-color: rgba(255, 255, 255, 0.9); /* Optional: add a semi-transparent background */
+  padding: 5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow to make it stand out */
+}
+@media (max-width: 720px) {
+  .cart-box {
+    flex-direction: column; /* Stack the cart and summary in a column */
+  }
+
+  .shopping-cart, 
+  .order-summary {
+    width: 100%; /* Make each box take up 100% width */
+    margin: 1rem 0; /* Add some spacing between them */
+  }
+
+  /* Adjust the checkout button to fit better */
+  .checkout-button {
+    width: 100%;
+  }
+
+  /* Adjust the user details section */
+  .userDetails .edit-btn {
+    width: 100%; /* Full width for the edit button */
+  }
+}
