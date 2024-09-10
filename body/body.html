@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/makeupStyle.css">
     <script src="../script/makeupjs.js" defer></script>
+    <script src="../script/body.js"></script>
     <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
@@ -202,26 +203,32 @@
                         </ul>
                     </div>
                 </div>
+                <!-- =========================== PRODUCTS ============================= -->
+                
                 <div class="products-container">
-                    <div class="product product1">
-                        <div class="img-holder"><img src="../image/bproduct1.png" alt=""><p class="offer"></p></div>
-                        <div class="product-content">
-                            <div class="brand-name"><h3>Plum</h3></div>
-                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <span class="avg-rating">4.7/5</span>
-                                <span class="count">(5)</span>
-                            </div>
-                            <div class="price"><p>NPR. 1028</p></div>
-                            <div class="btn-container">
-                                <i class="fa-regular fa-heart fa-3x"></i>
-                                <div class="add-to-cart">Add to Cart</div>
-                            </div>
-                        </div>
+                    <template id="bodyProductTemplate">
                        
-                    </div>
-                    <div class="product product2">
+                        <div class="product product1">
+                            <div class="img-holder"><img src="" alt=""><p class="offer"></p></div>
+                            <div class="product-content">
+                                <div class="brand-name"><h3></h3></div>
+                                <div class="item-detail"><p></p></div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="avg-rating">4.7/5</span>
+                                    <span class="count">(5)</span>
+                                </div>
+                                <div class="price"><p></p></div>
+                                <div class="btn-container">
+                                    <i class="fa-regular fa-heart fa-3x"></i>
+                                    <div class="add-to-cart">Add to Cart</div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </template>
+
+                    <!-- <div class="product product2">
                         <div class="img-holder"><img src="../image/bproduct2.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Plum</h3></div>
@@ -239,6 +246,7 @@
                         </div>
                        
                     </div>
+
                     <div class="product product3">
                         <div class="img-holder"><img src="../image/bproduct3.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
@@ -276,6 +284,7 @@
                         </div>
                        
                     </div>
+
                     <div class="product product5">
                         <div class="img-holder"><img src="../image/bproduct5.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
@@ -294,6 +303,7 @@
                         </div>
                        
                     </div>
+
                     <div class="product product6">
                         <div class="img-holder"><img src="../image/bproduct6.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
@@ -312,6 +322,7 @@
                         </div>
                        
                     </div>
+
                     <div class="product product7">
                         <div class="img-holder"><img src="../image/bproduct7.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
@@ -349,6 +360,7 @@
                         </div>
                        
                     </div> 
+
                     <div class="product product9">
                         <div class="img-holder"><img src="../image/bproduct9.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
@@ -366,7 +378,8 @@
                             </div>
                         </div>
                        
-                    </div> 
+                    </div>  -->
+
                 </div>
                 <div class="view-more">
                     <button class="btn">View More</button>
@@ -375,6 +388,8 @@
             
         </section>
     </div>
+
+
     <script>
         function toggleContent(id) {
             var content = document.getElementById(id);
@@ -390,7 +405,7 @@
             
             <script>
                 includeHTML();
-                </script>
+            </script>
 </body>
 
 </html>

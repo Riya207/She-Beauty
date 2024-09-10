@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/cartPage.css">
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("she-website-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("she-website-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+</head>
+<body>
+    <div class="container">
+        <div class="cart-box">
+
+            <div class="shopping-cart">
+                <h1>Your Shopping Cart</h1>
+                <div class="cart-items">
+                    <input type="checkbox" id="item1" name="item1" value="" class="largeCheckbox">
+                    <label for="item1"></label>
+                    <img src="./image/bproduct6.png" alt="product picture">
+                    <div class="details">
+
+                        <div class="item-details">
+                            <p class="item-name">Note Loose Powder</p>
+                            <div class="quantity">
+                              <span class="-"> -</span>
+                              <span> 1</span>
+                              <span class="plus"> +</span>
+                            </div>
+                        </div>
+                      
+    
+                    <i class="fa-solid fa-circle-xmark fa-2x"></i>
+                    <p class="item-price">NPR. 200</p>
+                       
+                    </div>
+
+                    
+                </div>
+
+                
+                
+                
+            </div>
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order">
+                    <p class="order-summary-item">Total: <span>NPR. 200</span></p>
+                    <p class="order-summary-item">Delivery Charge: <span>NPR. 149</span></p>
+                    <p class="order-summary-item">Discount: <span>NPR. 0</span></p>
+                    <p class="order-summary-total">Grand Total: <span>NPR. 349</span></p>
+                </div>
+                <button class="checkout-button">Checkout</button>
+            </div>
+        </div>
+    
+    </div>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        </script>
+        
+            <div she-website-html="../footer.html"></div>
+            
+            <script>
+                includeHTML();
+                </script>
+    <script src="./script/product-page.js"></script>
+    <script src="./script/cartPage.js"></script>
+</body>
+</html>
