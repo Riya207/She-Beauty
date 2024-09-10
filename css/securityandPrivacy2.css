@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
           font-family: "Roboto", sans-serif;
@@ -115,153 +114,129 @@ body {
           color: #555;
           margin: 5px 0 0 0;
       }
+      
       .user-container{
         
         width :90%;
         margin: 0 auto;
       }
+      
       .account-section {
           display: flex;
           padding: 20px;
+      }
+      .account-box {
+        width: 300px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        font-family: "Roboto", sans-serif;
+        margin-right: 20px;
+        height: 100%;
+    }
+    
+    .account-box h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        padding-left: 30px;
+        margin-top: 5px;
+        color: #1F1D1D;
+    }
+    
+    .account-box ul {
+        list-style-type: none;
+        padding: 0;
+        flex-grow: 1;
+    }
+    
+    .account-box ul li {
+        margin-bottom: 10px;
+    }
+    
+    .account-box ul li a {
+        text-decoration: none;
+        color: #413E3E;
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        
+    }
+    
+    .account-box ul li a:hover {
+        background-color: #7B7BFF;
+        color: #ffff;
+    }
+    
+    .account-box ul li a.selected {
+        background-color: #d2bcfc;
+        color: white;
+    }
+    
+    .account-box ul li a::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        background-size: contain;
+    }
+    .account-box ul li i{
+        margin-right: 10px;
+    }
+    .wrapper {
           
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          margin-left: 100px;
       }
       
-    .account-box {
-      width: 300px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      font-family: "Roboto", sans-serif;
-      margin-right: 20px;
-      height: 100%;
-  }
-  
-  .account-box h2 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 5px;
-      padding-left: 30px;
-      margin-top: 5px;
-      color: #1F1D1D;
-  }
-  
-  .account-box ul {
-      list-style-type: none;
-      padding: 0;
-      flex-grow: 1;
-  }
-  
-  .account-box ul li {
-      margin-bottom: 10px;
-  }
-  
-  .account-box ul li a {
-      text-decoration: none;
-      color: #413E3E;
-      display: flex;
-      align-items: center;
-      padding: 10px 0px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      
-  }
-  
-  .account-box ul li a:hover {
-      background-color: #7B7BFF;
-      color: #ffff;
-  }
-  
-  .account-box ul li a.selected {
-      background-color: #d2bcfc;
-      color: white;
-  }
-  
-  .account-box ul li a::before {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-      background-size: contain;
-  }
-  .account-box ul li i{
-      margin-right: 10px;
-  }
-      .address-details {
-          width: 50%;
-          padding-left: 20px;
-          border-left: 1px solid #ddd;
-      }
-      
-      .address-details h2 {
-          margin-top: 0;
+      .card {
+          background-color: #eae6fc;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 40px 20px; 
+          text-align: center;
+          width: 400px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 40px;
           margin-bottom: 20px;
       }
       
-      .address-details form {
-          display: grid;
-          gap: 15px;
-      }
-      
-      .address-details label {
-          font-weight: bold;
-      }
-      
-      .address-details input {
-          padding: 10px;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          width: 100%;
-      }
-      
-      .address-details button {
-          padding: 12px 20px;
-          background-color: #7B7BFF;
-          color: white;
-          border: none;
-          cursor: pointer;
-          border-radius: 4px;
-          width: 150px;
-      }
-      label {
-          display: block;
-          margin-bottom: 8px;
-          font-size: 16px;
-          color: #555;
-      }
-      
-      select {
-          width: 106%;
-          padding: 10px;
-          font-size: 16px;
-          color: #555;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          background-color: #fff;
-          background-image: url('data:image/svg+xml;utf8,<svg fill="%23555" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
-          background-repeat: no-repeat;
-          background-position: right 10px center; 
-          background-size: 16px 16px;
-          appearance: none;
-          cursor: pointer;
-         
+      .card .icon img {
+          width: 100px; 
+          height: 90px; 
           
       }
       
-      select:focus {
-          border-color: #aaa;
-          outline: none;
+      .message {
+          margin-top: 20px;
+          font-size: 20px;
+          color: #333;
+          font-weight: 500;
       }
       
-      option {
-          padding: 10px;
-          font-size: 16px;
-          color: #555;
-          background-color: #fff;
+      .done-btn {
+          margin-top: 40px;
+          padding: 12px 0;
+          background-color: #7a63ff;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 22px;
+          width: 100%; 
+          max-width: 440px; 
       }
       
-      select option [value=""]{
-          color: #bbb7b7;
+      .done-btn:hover {
+          background-color: #6955d9;
       }
-      
+   
