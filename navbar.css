@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto-Light', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+.nav {
+    background: #FFF8F8;
+    padding: 10px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: flex-direction 0.3s;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 14px;
+    background: #F1F1F1;
+    height: 48px;
+    overflow: visible; 
+    transition: background 0.25s;
+    position: relative;
+}
+
+.search:focus-within {
+    background-color: #e5e4e4;
+}
+
+.search-input {
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 600px;
+}
+
+.result-box {
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px 0;   
+    display: none; 
+}
+
+.result-box ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.result-box ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.result-box ul li:hover {
+    background: #e9f3ff;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons .account {
+    display: flex;
+    align-items: center; 
+}
+
+.icons .account .material-symbols-outlined {
+    margin-left: 1px;
+}
+
+.login-text {
+    font-size: 20px;
+    color: #000;
+}
+
+.icons .material-symbols-outlined {
+    font-size: 24px;
+    color: #000; 
+    margin-left: 20px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #e5e4e4;
+    border: none;
+}
+
+.header {
+    background: #FFF8F8;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header ul li {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.header ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.header ul li a:hover {
+    color: #B21CE6;
+}
+
+.header ul li a .material-symbols-outlined {
+    position: relative;
+    top: 4px;
+}
+
+.dropdown_menu {
+    display: none;
+}
+
+.header ul li:hover .dropdown_menu {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    z-index: 1000;
+    margin-top: 8px;
+    border-radius: 0px 20px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header ul li:hover .dropdown_menu ul {
+    display: block;
+    margin: 0px;
+}
+
+.header ul li:hover .dropdown_menu ul li {
+    width: 150px;
+    padding: 0;
+    border-bottom: 1px dotted #f4b6fd; 
+    background: transparent;
+    text-align: left;
+}
+
+.header ul li:hover .dropdown_menu ul li a {
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+    font-size: 18px;
+    padding: 8px;
+    margin: 6px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.header ul li:hover .dropdown_menu ul li a:hover {
+    background-color: #DECBF2;
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 1060px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav .icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .nav .search {
+        width: 100%;
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .nav .logo,
+    .nav .icons {
+        order: 1;
+    }
+
+    .header {
+        padding: 0 20px; /* Adjust padding for a smaller gap */
+    }
+
+    .header ul li {
+        padding: 5px 10px; /* Reduce padding for a smaller gap */
+    }
+}
