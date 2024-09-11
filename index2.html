@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>She Beauty index</title>
+    <!-- <link rel="stylesheet" href="./css/navbar.css" /> -->
+     <!-- <link rel="stylesheet" href="./css/navbar2.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto-Light:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+body .nav {
+    /* border: 2px solid khaki; */
+    width: 100%;
+    background: #FFF8F8;
+    padding: 10px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: flex-direction 0.3s;
+}
+
+.nav a .logo {
+    width: 120px;
+    height: auto;
+}
+
+.nav .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 14px;
+    background: #F1F1F1;
+    height: 48px;
+    overflow: visible; 
+    transition: background 0.25s;
+    position: relative;
+}
+
+.nav .search:focus-within {
+    background-color: #e5e4e4;
+}
+
+.search .search-input {
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 600px;
+}
+
+.result-box {
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px 0;   
+    display: none; 
+}
+
+.result-box ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.result-box ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.result-box ul li:hover {
+    background: #e9f3ff;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons .account {
+    display: flex;
+    align-items: center; 
+}
+
+.icons .account .material-symbols-outlined {
+    margin-left: 1px;
+}
+
+.login-text {
+    font-size: 20px;
+    color: #000;
+}
+
+.icons .material-symbols-outlined {
+    font-size: 24px;
+    color: #000; 
+    margin-left: 20px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #e5e4e4;
+    border: none;
+}
+
+.header {
+    background: #FFF8F8;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header ul li {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.header ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.header ul li a:hover {
+    color: #B21CE6;
+}
+
+.header ul li a .material-symbols-outlined {
+    position: relative;
+    top: 4px;
+}
+
+.dropdown_menu {
+    display: none;
+}
+
+.header ul li:hover .dropdown_menu {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    z-index: 1000;
+    margin-top: 8px;
+    border-radius: 0px 20px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header ul li:hover .dropdown_menu ul {
+    display: block;
+    margin: 0px;
+}
+
+.header ul li:hover .dropdown_menu ul li {
+    width: 150px;
+    padding: 0;
+    border-bottom: 1px dotted #f4b6fd; 
+    background: transparent;
+    text-align: left;
+}
+
+.header ul li:hover .dropdown_menu ul li a {
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+    font-size: 18px;
+    padding: 8px;
+    margin: 6px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.header ul li:hover .dropdown_menu ul li a:hover {
+    background-color: #DECBF2;
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 1060px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav .icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .nav .search {
+        width: 100%;
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .nav .logo,
+    .nav .icons {
+        order: 1;
+    }
+
+    .header {
+        padding: 0 20px; /* Adjust padding for a smaller gap */
+    }
+
+    .header ul li {
+        padding: 5px 10px; /* Reduce padding for a smaller gap */
+    }
+}
+    </style>
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("she-website-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {
+                    elmnt.innerHTML = this.responseText;
+                  }
+                  if (this.status == 404) {
+                    elmnt.innerHTML = "Page not found.";
+                  }
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("she-website-html");
+                  includeHTML();
+                }
+              };
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="./navbar.html">
+        <img src="logo.png" alt="image not loading" class="logo" />
+      </a>
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input
+          class="search-input"
+          type="search"
+          id="input-box"
+          placeholder="Search for products"
+          autocomplete="off"
+        />
+
+        <div class="result-box"></div>
+      </div>
+
+      <div class="icons">
+        <div class="account">
+          <a href="login.html"
+            ><span class="login-text">Login</span>
+            <span class="material-symbols-outlined">account_circle</span></a
+          >
+        </div>
+        <a href="cartPage.html"
+          ><span class="material-symbols-outlined">shopping_cart</span></a
+        >
+        <a href="notification.html"
+          ><span class="material-symbols-outlined">mark_email_unread</span></a
+        >
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <div class="header">
+      <ul>
+        <li>
+          <a href="makeup/makeup.html"
+            >Makeup<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="makeup/face.html">Face</a></li>
+              <li><a href="makeup/eyes.html">Eyes</a></li>
+              <li><a href="makeup/lip.html">Lips</a></li>
+              <li><a href="makeup/nails.html">Nails</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="skin/skincare.html"
+            >Skin<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="skin/cleanser.html">Cleanser</a></li>
+              <li><a href="skin/moisturiser.html">Moisturizer</a></li>
+              <li><a href="skin/suncare.html">Suncare</a></li>
+              <li><a href="skin/serum.html">Serum</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="hair/hair.html"
+            >Hair<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="hair/shampoo.html">Shampoo</a></li>
+              <li><a href="hair/conditioner.html">Conditioner</a></li>
+              <li><a href="hair/hair-oil.html">Hair Oil</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="body/body.html"
+            >Body<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="body/body lotion.html">Body Lotion</a></li>
+              <li><a href="body/body wash.html">Body Wash</a></li>
+              <li><a href="body/fragrance.html">Fragrance</a></li>
+              <li><a href="body/powder.html">Powder</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"
+            >Brand<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="search_result.js"></script>
+    <script>
+        function toggleContent(id) {
+          var content = document.getElementById(id);
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        }
+      </script>
+  
+
+  
+      <!-- -------- include banner --------- -->
+      <div she-website-html="./indexBanner.html"></div>
+  
+      <!-- -------- include category --------- -->
+      <div she-website-html="./category.html"></div>
+  
+      <!-- -------- include bestsellers --------- -->
+      <div she-website-html="./best-sellers.html"></div>
+  
+      <!-- -------- include delivery banner --------- -->
+      <div she-website-html="./deliverybannar.html"></div>
+  
+      <!-- -------- include footer --------- -->
+      <div she-website-html="../footer.html"></div>
+  
+      <script>
+        includeHTML();
+      </script>
+  </body>
+</html>
