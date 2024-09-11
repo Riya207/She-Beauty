@@ -190,106 +190,7 @@ body {
       margin-right: 10px;
   }
 
-  .products{
-    display:flex;
-    flex-direction: column;
-  }
-  .products .products-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem;
-   
-  }
-    
-  .products .left h2{
-    display: inline;
-    font-size: 26px;
-  }
   
-  .products .left h2 p{
-    display: inline;
-  }
-  .products-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-  }
-  .products-container .product{
-    /* display: inline; */
-    position:relative;
-    margin: 8px;
-    width: 250px;
-    border-radius: 0.8rem;
-    border: 2px solid #CCCCFF;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.151);;
-  }
-  .product .img-holder img{
-    width: 100%;
-    height: 196px;
-    object-fit: contain;
-  }
-  .product .product-content{
-    margin: 4px;
-    padding-bottom: 50px;
-  }
-  .product-content .brand-name h3{
-    text-transform: uppercase;
-    color:#7B7BFF;
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-  .product-content .item-detail p{
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-  .product-content .rating{
-    margin: 4px 0;
-  }
-  .product-content .rating i{
-    color:rgba(255, 255, 0, 0.808);
-  }
-  .product-content .rating span{
-    padding-left: 5px;
-  }
-  .product-content .rating .avg-rating{
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  .product-content .rating .count{
-    font-size: 1rem;
-  }
-  .product-content .price p{
-    font-size: 1.6rem;
-    font-weight: bold;
-    color:#B21CE6;
-    margin: 4px 0;
-  }
-  .product-content .btn-container{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 2px;
-    background: #fff;
-  }
-  
-  .product-content .btn-container .add-to-cart{
-    font-size: 1.4rem;
-    font-weight: 500;
-    padding: 0.4em 4.6em;
-    background: #7B7BFF;
-    border-radius: 0.8rem;
-    color:#fff;
-    cursor: pointer;
-  }
-  
-  .product-content .btn-container .add-to-cart:hover{
-    background: #7b7bffa7;
-  }
   /* ################## BUTTON STYLING ######################## */
   .view-more .btn{
     border: 2px solid #CCCCFF;
@@ -311,3 +212,127 @@ body {
   .btn:hover{
     background: #7b7bff15
   }
+
+  
+  .wishlist-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+   .wishlist-item{
+   
+    position:relative;
+    margin: 8px;
+    width: 250px;
+    border-radius: 0.8rem;
+    border: 2px solid #CCCCFF;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.151);;
+  }
+
+h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+
+/* .wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  } */
+
+.wishlist-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+.wishlist-item img {
+   
+    margin-bottom: 10px;
+    width: 100%;
+    height: 196px;
+  }
+  .brand-name h3{
+    text-transform: uppercase;
+    color:#7B7BFF;
+    font-size: 16px;
+    font-weight: 500;
+    
+  }
+  
+ .wishlist-item p{
+  font-size: 14px;
+  
+}
+ .wishlist-item .price {
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+button {
+    padding: 10px 20px;
+    background-color: #8E8CF6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+button:hover {
+    background-color: #7b79e5;
+  }
+
+.remove-btn {
+    background-color: #e53935;
+  }
+
+.remove-btn:hover {
+    background-color: #b82222;
+  }
+
+.view-more .btn{
+  border: 2px solid #CCCCFF;
+  border-radius: 0.5rem;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #fff;
+  box-shadow:  0 4px 8px rgba(0,0,0,.3);
+  cursor: pointer;
+  color: #333;
+  margin-top: -25px;
+}
+}
+.view-more{
+  /* background-color: red; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  
+}
+.btn:hover{
+  background: #7b7bff15
+}
+
+.products-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.products-container .product{
+  /* display: inline; */
+  position:relative;
+  margin: 8px;
+  width: 250px;
+  border-radius: 0.8rem;
+  border: 2px solid #CCCCFF;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.151);;
+}
