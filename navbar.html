@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar</title>
-    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./css/navbar2.css" />
+     <!-- <link rel="stylesheet" href="./css/navbar2.css"> -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto-Light:wght@300&display=swap"
@@ -13,86 +14,121 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <div class="nav">
-        <a href="navbar.html">
-            <img src="logo.png" alt="image not loading" class="logo" />
-          </a>
-          <div class="search">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input
-                class="search-input"
-                type="search"
-                id="input-box"
-                placeholder="Search for products"
-                autocomplete="off"
-            />
-           
-            <div class="result-box"></div>
-            
+    <div class="nav-data">
+      <a href="./index.html" class="logoImage">
+        <img src="./image/logo.png" alt="image not loading" class="logo" />
+      </a>
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input
+          class="search-input"
+          type="search"
+          id="input-box"
+          placeholder="Search for products"
+          autocomplete="off"
+        />
+
+        <div class="result-box"></div>
+      </div>
+
+      <div class="nav-icons">
+        <div class="account">
+          <a href="login.html">
+            <span class="login-text">Login</span>
+            <!-- <span class="material-symbols-outlined">account_circle</span></a -->
+            <!-- > -->
+            <i class="fa-regular fa-user fa-3x"></i>
+            </a>
         </div>
-        
-<div class="icons">
-    <div class="account">
-        <a href="login.html"><span class="login-text">Login</span>
-            <span class="material-symbols-outlined">account_circle</span></a>
-    </div>
-    <a href="cartPage.html"><span class="material-symbols-outlined">shopping_cart</span></a>
-    <a href="notification.html"><span class="material-symbols-outlined">mark_email_unread</span></a>
-</div>
+        <a href="cartPage.html">
+          <!-- <span class="material-symbols-outlined">shopping_cart</span></a -->
+          <!-- > -->
+          <i class="fa-solid fa-cart-shopping fa-3x"></i>
+          </a>
+        <a href="notification.html">
+          <!-- <span class="material-symbols-outlined">mark_email_unread</span></a -->
+          <!-- > -->
+          <i class="fa-regular fa-envelope fa-3x"></i>
+          </a>
+      </div>
     </div>
     <div class="line"></div>
 
     <div class="header">
-        <ul>
-            
-            <li><a href="makeup/makeup.html">Makeup<span class="material-symbols-outlined">arrow_drop_down</span></a>
-                <div class="dropdown_menu">
-                    <ul>
-                        <li><a href="makeup/face.html">Face</a></li>
-                        <li><a href="makeup/eyes.html">Eyes</a></li>
-                        <li><a href="makeup/lip.html">Lips</a></li>
-                        <li><a href="makeup/nails.html">Nails</a></li>
-                    </ul>
-                </div>
-            </li>
+      <ul>
+        <li>
+          <a href="makeup/makeup.html"
+            >Makeup<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="makeup/face.html">Face</a></li>
+              <li><a href="makeup/eyes.html">Eyes</a></li>
+              <li><a href="makeup/lip.html">Lips</a></li>
+              <li><a href="makeup/nails.html">Nails</a></li>
+            </ul>
+          </div>
+        </li>
 
-            <li><a href="skin/skincare.html">Skin<span class="material-symbols-outlined">arrow_drop_down</span></a>  
-                <div class="dropdown_menu">
-                    <ul>
-                        <li><a href="skin/cleanser.html">Cleanser</a></li>
-                        <li><a href="skin/moisturiser.html">Moisturizer</a></li>
-                        <li><a href="skin/suncare.html">Suncare</a></li>
-                        <li><a href="skin/serum.html">Serum</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="hair/hair.html">Hair<span class="material-symbols-outlined">arrow_drop_down</span></a>  
-                <div class="dropdown_menu">
-                    <ul>
-                        <li><a href="hair/shampoo.html">Shampoo</a></li>
-                        <li><a href="hair/conditioner.html">Conditioner</a></li>
-                        <li><a href="hair/hair-oil.html">Hair Oil</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="body/body.html">Body<span class="material-symbols-outlined">arrow_drop_down</span></a>
-                <div class="dropdown_menu">
-                    <ul>
-                        <li><a href="body/body lotion.html">Body Lotion</a></li>
-                        <li><a href="body/body wash.html">Body Wash</a></li>
-                        <li><a href="body/fragrance.html">Fragrance</a></li>
-                        <li><a href="body/powder.html">Powder</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Brand<span class="material-symbols-outlined">arrow_drop_down</span></a></li>
-        </ul>
-    </div> 
+        <li>
+          <a href="skin/skincare.html"
+            >Skin<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="skin/cleanser.html">Cleanser</a></li>
+              <li><a href="skin/moisturiser.html">Moisturizer</a></li>
+              <li><a href="skin/suncare.html">Suncare</a></li>
+              <li><a href="skin/serum.html">Serum</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="hair/hair.html"
+            >Hair<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="hair/shampoo.html">Shampoo</a></li>
+              <li><a href="hair/conditioner.html">Conditioner</a></li>
+              <li><a href="hair/hair-oil.html">Hair Oil</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="body/body.html"
+            >Body<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+          <div class="dropdown_menu">
+            <ul>
+              <li><a href="body/body lotion.html">Body Lotion</a></li>
+              <li><a href="body/body wash.html">Body Wash</a></li>
+              <li><a href="body/fragrance.html">Fragrance</a></li>
+              <li><a href="body/powder.html">Powder</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"
+            >Brand<span class="material-symbols-outlined"
+              >arrow_drop_down</span
+            ></a
+          >
+        </li>
+      </ul>
+    </div>
 
-    
- <script src="search_result.js"></script> 
+    <script src="search_result.js"></script>
   </body>
-  </html>
-  
+</html>

@@ -1,234 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Body-Category</title>
-    <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/makeupStyle.css">
+    <script
+      src="https://kit.fontawesome.com/3c507479c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/makeupStyle.css" />
+    <link rel="stylesheet" href="../css/navbar2.css">
     <script src="../script/makeupjs.js" defer></script>
-    <script src="../script/body.js"></script>
+    <script src="../script/body.js" defer></script>
     <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /*loop through a collection of all HTML elements:*/
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("she-website-html");
-            if (file) {
-              /*make an HTTP request using the attribute value as the file name:*/
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /*remove the attribute, and call this function once more:*/
-                  elmnt.removeAttribute("she-website-html");
-                  includeHTML();
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("she-website-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                if (this.status == 200) {
+                  elmnt.innerHTML = this.responseText;
                 }
-              }      
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /*exit the function:*/
-              return;
-            }
+                if (this.status == 404) {
+                  elmnt.innerHTML = "Page not found.";
+                }
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("she-website-html");
+                includeHTML();
+              }
+            };
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
           }
-        };
-        </script>
-</head>
+        }
+      }
+    </script>
+  </head>
 
-<body>
+  <body>
+    <script>
+      function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+    </script>
+
+    <div she-website-html="../navbar.html"></div>
+
+    <script>
+      includeHTML();
+    </script>
+    
+
     <section class="banner">
-        <img src="../image/body-banner.png" alt="a banner of body category">
+      <img src="../image/body-banner.png" alt="a banner of body category" />
     </section>
 
     <section class="category">
-        <h2 class="categ-title">Categories</h2>
-        <div class="categ-wrapper">
-            
-            <div class="categ">
-                <a href="./body lotion.html">
-                    <img src="../image/body lotion.png" alt="body lotion-category">
-                    <p>body lotion</p>
-                </a>
-            </div>
-            <div class="categ">
-                <a href="./body wash.html"><img src="../image/body wash.png" alt="body wash-category">
-                    <p>body wash</p>
-                </a>
-            </div>
-            <div class="categ">
-                <a href="./fragrance.html"><img src="../image/fragrance.png" alt="fragrance category">
-                    <p>fragrance</p>
-                </a>
-            </div>
-            <div class="categ">
-                <a href="./powder.html"><img src="../image/powder.png" alt="powder category">
-                    <p>powder</p>
-                </a>
-            </div>
+      <h2 class="categ-title">Categories</h2>
+      <div class="categ-wrapper">
+        <div class="categ">
+          <a href="./body lotion.html">
+            <img src="../image/body lotion.png" alt="body lotion-category" />
+            <p>body lotion</p>
+          </a>
         </div>
+        <div class="categ">
+          <a href="./body wash.html"
+            ><img src="../image/body wash.png" alt="body wash-category" />
+            <p>body wash</p>
+          </a>
+        </div>
+        <div class="categ">
+          <a href="./fragrance.html"
+            ><img src="../image/fragrance.png" alt="fragrance category" />
+            <p>fragrance</p>
+          </a>
+        </div>
+        <div class="categ">
+          <a href="./powder.html"
+            ><img src="../image/powder.png" alt="powder category" />
+            <p>powder</p>
+          </a>
+        </div>
+      </div>
     </section>
 
     <div class="container">
-        <section class="main-section">
-            <div class="main filter">
-
-
-                <div class="filter-container">
-                    <div class="filter-section">
-                        <div class="filter-header" onclick="toggleContent('category')">
-                            <span>Filter by Category</span>
-                            <span><i class="fa-solid fa-chevron-down"></i></span>
-                        </div>
-                        <div class="filter-content" id="category">
-                            <label>
-                                <span>Body Lotion</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Body Wash</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Fragrance</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Powder</span>
-                                <input type="checkbox">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="filter-section">
-                        <div class="filter-header" onclick="toggleContent('brands')">
-                            <span>Filter by Brands</span>
-                            <span><i class="fa-solid fa-chevron-down"></i></span>
-                        </div>
-                        <div class="filter-content" id="brands">
-                            <label>
-                                <span>Johnson's</span>
-                                <input type="checkbox" checked>
-                            </label>
-                            <label>
-                                <span>Nivea</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Lux</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Garnier</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Savlon</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Dettol</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Enchanteur</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Mamaearth</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Cetaphil</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Vaseline</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Fix derma</span>
-                                <input type="checkbox">
-                            </label>
-                            <label>
-                                <span>Veet</span>
-                                <input type="checkbox">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="filter-section">
-                        <div class="filter-header" onclick="toggleContent('price')">
-                            <span>Filter by Price</span>
-                            <span><i class="fa-solid fa-chevron-down"></i></span>
-                        </div>
-                        <div class="filter-content" id="price">
-                            <div class="price-range">
-                                <span>NPR. 200</span>
-                                <span>NPR. 2000</span>
-                            </div>
-                            <input type="range" class="range" min="200" max="2000" value="50">
-                        </div>
-                    </div>
-                </div>
-
-
+      <section class="main-section">
+        <div class="main filter">
+          <div class="filter-container">
+            <div class="filter-section">
+              <div class="filter-header" onclick="toggleContent('category')">
+                <span>Filter by Category</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
+              <div class="filter-content" id="category">
+                <label>
+                  <span>Body Lotion</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Body Wash</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Fragrance</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Powder</span>
+                  <input type="checkbox" />
+                </label>
+              </div>
             </div>
-            <!-- <div class="main-products"></div> -->
-            <div class="products">
-                <div class="products-header">
-                    <div class="left">
-                        <h2>Body<p>(20 items)</p>
-                        </h2>
-                    </div>
-                    <div class="right">
-                        <div class="sort-header">
-                            <span>Sort By</span>
-                          
-                                <span>
-    
-                                    <!-- <input type="checkbox" name="" id="toggle"> -->
-                                    <i class="fa-solid fa-chevron-down drop"></i>
-                                </span>
-    
-                            
-    
-                        </div>
-    
-                        <ul class="sort-price">
-                            <li class="low-to-high">Price: Low to High</li>
-                            <li class="high-to-low">Price: High to Low</li>
-                        </ul>
-                    </div>
+            <div class="filter-section">
+              <div class="filter-header" onclick="toggleContent('brands')">
+                <span>Filter by Brands</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
+              <div class="filter-content" id="brands">
+                <label>
+                  <span>Johnson's</span>
+                  <input type="checkbox" checked />
+                </label>
+                <label>
+                  <span>Nivea</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Lux</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Garnier</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Savlon</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Dettol</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Enchanteur</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Mamaearth</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Cetaphil</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Vaseline</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Fix derma</span>
+                  <input type="checkbox" />
+                </label>
+                <label>
+                  <span>Veet</span>
+                  <input type="checkbox" />
+                </label>
+              </div>
+            </div>
+            <div class="filter-section">
+              <div class="filter-header" onclick="toggleContent('price')">
+                <span>Filter by Price</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+              </div>
+              <div class="filter-content" id="price">
+                <div class="price-range">
+                  <span>NPR. 200</span>
+                  <span>NPR. 2000</span>
                 </div>
-                <!-- =========================== PRODUCTS ============================= -->
-                
-                <div class="products-container">
-                    <template id="bodyProductTemplate">
-                       
-                        <div class="product product1">
-                            <div class="img-holder"><img src="" alt=""><p class="offer"></p></div>
-                            <div class="product-content">
-                                <div class="brand-name"><h3></h3></div>
-                                <div class="item-detail"><p></p></div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span class="avg-rating">4.7/5</span>
-                                    <span class="count">(5)</span>
-                                </div>
-                                <div class="price"><p></p></div>
-                                <div class="btn-container">
-                                    <i class="fa-regular fa-heart fa-3x"></i>
-                                    <div class="add-to-cart">Add to Cart</div>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </template>
+                <input
+                  type="range"
+                  class="range"
+                  min="200"
+                  max="2000"
+                  value="50"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="main-products"></div> -->
+        <div class="products">
+          <div class="products-header">
+            <div class="left">
+              <h2>
+                Body
+                <p>(20 items)</p>
+              </h2>
+            </div>
+            <div class="right">
+              <div class="sort-header">
+                <span>Sort By</span>
 
-                    <!-- <div class="product product2">
+                <span>
+                  <!-- <input type="checkbox" name="" id="toggle"> -->
+                  <i class="fa-solid fa-chevron-down drop"></i>
+                </span>
+              </div>
+
+              <ul class="sort-price">
+                <li class="low-to-high">Price: Low to High</li>
+                <li class="high-to-low">Price: High to Low</li>
+              </ul>
+            </div>
+          </div>
+          <!-- =========================== PRODUCTS ============================= -->
+
+          <div class="products-container">
+            <template id="bodyProductTemplate">
+              <div class="product product1">
+                <div class="img-holder">
+                  <img src="" alt="" />
+                  <p class="offer"></p>
+                </div>
+                <div class="product-content">
+                  <div class="brand-name"><h3></h3></div>
+                  <div class="item-detail"><p></p></div>
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="avg-rating">4.7/5</span>
+                    <span class="count">(5)</span>
+                  </div>
+                  <div class="price"><p></p></div>
+                  <div class="btn-container">
+                    <i class="fa-regular fa-heart fa-3x"></i>
+                    <div class="add-to-cart">Add to Cart</div>
+                  </div>
+                </div>
+              </div>
+            </template>
+
+            <!-- <div class="product product2">
                         <div class="img-holder"><img src="../image/bproduct2.png" alt=""><p class="offer"></p></div>
                         <div class="product-content">
                             <div class="brand-name"><h3>Plum</h3></div>
@@ -379,33 +407,30 @@
                         </div>
                        
                     </div>  -->
-
-                </div>
-                <div class="view-more">
-                    <button class="btn">View More</button>
-                </div>
-            </div>
-            
-        </section>
+          </div>
+          <div class="view-more">
+            <button class="btn">View More</button>
+          </div>
+        </div>
+      </section>
     </div>
 
+    <script>
+      function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+    </script>
+
+    <div she-website-html="../footer.html"></div>
 
     <script>
-        function toggleContent(id) {
-            var content = document.getElementById(id);
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        }
-        </script>
-        
-            <div she-website-html="../footer.html"></div>
-            
-            <script>
-                includeHTML();
-            </script>
-</body>
-
+      includeHTML();
+    </script>
+    
+  </body>
 </html>

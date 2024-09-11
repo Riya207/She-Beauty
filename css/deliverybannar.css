@@ -6,9 +6,10 @@
 
       
       .banner {
+          display: block;
           position: relative;
           width: 100%;
-          max-width: 1500px;
+          /* max-width: 1500px; */
           margin: 0 auto;
           height: auto;
           
@@ -17,10 +18,11 @@
      
       .banner img {
           width: 100%;
-          height: auto; /* Maintain aspect ratio */
+          /* height: auto; */
+           /* Maintain aspect ratio */
           display: block;
           object-fit: contain;
-          padding-top: 10px;
+          /* padding-top: 10px; */
           
       }
 
@@ -35,7 +37,8 @@
           background-color: #ff4d4d; /* Red background color */
           color: white;
           padding: 8px 16px;
-          font-size: 1.5rem; 
+          font-size: 1.8rem; 
+          letter-spacing: 1px;
           text-align: center;
           text-decoration: none;
           border-radius: 5px;

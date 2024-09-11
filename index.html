@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navbar2.css">
     <title>She beauty</title>
     <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /*loop through a collection of all HTML elements:*/
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("she-website-html");
-            if (file) {
-              /*make an HTTP request using the attribute value as the file name:*/
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /*remove the attribute, and call this function once more:*/
-                  elmnt.removeAttribute("she-website-html");
-                  includeHTML();
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("she-website-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4) {
+                if (this.status == 200) {
+                  elmnt.innerHTML = this.responseText;
                 }
-              }      
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /*exit the function:*/
-              return;
-            }
+                if (this.status == 404) {
+                  elmnt.innerHTML = "Page not found.";
+                }
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("she-website-html");
+                includeHTML();
+              }
+            };
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
           }
-        };
-        </script>
-</head>
-<body>
-    
-</body>
+        }
+      }
+    </script>
+  </head>
+
+
+  <body>
+    <script>
+      function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+    </script>
+
+
+    <!-- -------- include navbar --------- -->
+    <div she-website-html="./navbar.html"></div>
+
+    <!-- -------- include banner --------- -->
+    <div she-website-html="./indexBanner.html"></div>
+
+    <!-- -------- include category --------- -->
+    <div she-website-html="./category.html"></div>
+
+    <!-- -------- include bestsellers --------- -->
+    <div she-website-html="./best-sellers.html"></div>
+
+    <!-- -------- include delivery banner --------- -->
+    <div she-website-html="./deliverybannar.html"></div>
+
+    <!-- -------- include services banner --------- -->
+    <div she-website-html="./services.html"></div>
+
+    <!-- -------- include footer --------- -->
+    <div she-website-html="../footer.html"></div>
+
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>
