@@ -261,3 +261,59 @@ body {
       .order-container .btn:hover {
           background-color: #7b79e5;
       }
+
+      @media (max-width: 768px) {
+        .profile-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .order-status {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .account-section {
+            flex-direction: column;
+        }
+    
+        .order-container {
+            margin: 0 auto;
+        }
+    
+        .account-box {
+            max-width: 100%;
+        }
+    
+        .membership-card {
+            max-width: 100%;
+        }
+    
+        .order-status {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .profile-pic img {
+            width: 60px;
+            height: 60px;
+        }
+    
+        .profile-details h2 {
+            font-size: 20px;
+        }
+    
+        .order-status {
+            flex-direction: column;
+            width: 100%;
+        }
+    
+        .status-button {
+            max-width: 100%;
+        }
+    
+        .order-container {
+            max-width: 100%;
+        }
+    }
