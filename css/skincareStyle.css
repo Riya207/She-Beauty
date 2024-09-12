@@ -257,7 +257,9 @@ i.drop{
   margin: 4px 0;
 }
 .product-content .rating i{
-  color:rgba(255, 255, 0, 0.808);
+  /* color:rgba(255, 255, 0, 0.808); */
+  /* color:#ffb703; */
+  color:#fb8500;
 }
 .product-content .rating span{
   padding-left: 5px;

@@ -56,8 +56,9 @@ body .nav-data {
 
 .nav-icons {
     /* border: 2px solid darkblue; */
-    width: 20%;
+    width: 12%;
     display: flex;
+    text-align: center;
     justify-content: space-between;
     /* padding: 20px 0; */
 }
@@ -74,7 +75,7 @@ body .nav-data {
 .nav-icons a .cartAmount{
     position:absolute;
     display: block;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 500;
     background-color: red;
     color:white;
@@ -140,7 +141,7 @@ body .nav-data {
     /* border: 2px solid rgb(68, 68, 53); */
     display:flex;
     text-align: center;
-    gap:2px;
+    gap:5px;
 }
 .account a span{
     display: block;
