@@ -264,4 +264,51 @@ body {
       select option [value=""]{
           color: #bbb7b7;
       }
+      @media (max-width: 768px) {
+        .profile-header {
+          flex-direction: column; /* Stack profile header content */
+          align-items: flex-start;
+        }
+      
+        .user-container {
+          width: 95%;
+        }
+      
+        .account-section {
+          flex-direction: column;
+        }
+      
+        .account-box {
+          margin-bottom: 20px;
+        }
+      
+        .address-details {
+          border-left: none;
+          padding-left: 0;
+        }
+      
+        select {
+          width: 100%; /* Full width on smaller screens */
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .profile-pic img {
+          width: 60px;
+          height: 60px;
+        }
+      
+        .profile-details h2 {
+          font-size: 20px;
+        }
+      
+        .membership-card {
+          max-width: 100%;
+          padding: 10px;
+        }
+      
+        .account-box h2 {
+          font-size: 20px;
+        }
+      }
       
