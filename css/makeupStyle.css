@@ -288,6 +288,10 @@ i.drop{
   padding: 10px 2px;
   background: #fff;
 }
+.btn-container #heart-icon:hover{
+  color: #ff6666; /* Light red color when hovered */
+  cursor: pointer;
+}
 .product-content .btn-container i{
   width:20%;
 }

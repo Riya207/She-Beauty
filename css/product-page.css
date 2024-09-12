@@ -172,15 +172,19 @@
 }
 
 .tab-button.active {
-    background-color: #58585f;
+    background-color: #8f8ff3;
     color: white;
     border-bottom: 2px solid #dcdced;
     box-shadow: 0px 0px 15px rgba(64, 62, 62, 0.1);
 }
 
 .tab-content {
+    width:100%;
+    /* border: 2px solid #CCCCFF; */
+    background-color: #c1c1c42d;
     display: none;
-    padding: 10px 0;
+    border-radius: 6px;
+    padding: 10px 10px;
     font-size: 16px;
 }
 
