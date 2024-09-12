@@ -3,9 +3,8 @@
 <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Wishlist Added</title>
-          <link rel="stylesheet" href="/css/wishlist2.css">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <title>Order Completed</title>
+          <link rel="stylesheet" href="/css/completedOrder.css">
 </head>
 <body>
           <section class="profile-header">
@@ -44,53 +43,46 @@
                                         <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>  Signout</a></li>
                               </ul>
                     </div>
-                    
 
-                    <div class="wishlist-header">
-                        <h2>My Wishlist</h2>
-                 
-                    <div class="wishlist-container">
-                    
-                        <div class="wishlist-item">
-                            <img src="image/BhringAmla.png" alt="Mamaearth Conditioner">
-                            <div class="item-detail">
-                                <div class="brand-name"><h3>MAMAEARTH</h3></div>
-                            <p>MAMAEARTH BHRINGAMLA CONDITIONER WITH BHRINGRAJ & AMLA -250ML</p>
-                            </div>
-                            
-                            <p><span>⭐ 4.7/5</span> (5)</p>
-                            <p class="price">NPR.1,432</p>
-                            
-                            <button>Add to Cart</button>
-                            <button class="remove-btn">Remove</button>
-                        </div>
-                            <!-- Item 2 -->
-                            <div class="wishlist-item">
-                                <img src="image/meye2.png" alt="Lakme Eye Shadow Palette">
-                                <div class="item-detail">
-                                    <div class="brand-name"><h3>LAKME</h3></div>
-                                <p>LAKME ABSOLUTE INFINITY EYE SHADOW PALETTE, CORAL SUNSET, 12 G</p>
-                                </div>
-                                <p><span>⭐ 4.7/5</span> (5)</p>
-                                <p class="price">NPR.1,432</p>
-                                <button>Add to Cart</button>
-                                <button class="remove-btn">Remove</button>
-                            </div>
-                
-                        </div>
-                
-                   </div>
+                    <div class="order-details">
+                              <h2>Order Details</h2>
+                              <div class="order-status">
+                                  <button class="status-button active">All Orders</button>
+                                  <button class="status-button active">In Process</button>
+                                  <button class="status-button">Completed</button>
+                              </div>
+
+                              <div class="order-summary">
+                                        <div class="order-header">
+                                        <p>Order # 20220312332</p>
+                                        </div>
+
+                                        <div class="order-item">
+                                            <div class="item-image">
+                                                <img src="/image/mproduct4.png" alt="Product Image">
+                                            </div>
+                                            <div class="item-details">
+                                                  <div class="p-name">
+                                                <p><strong>Mamaearth CONCEALER-6ML</strong></p>
+                                                </div>
+                                                <p>Quantity: 1</p>
+                                                <p>Status: Delivered</p>
+                                                <p>Order Date: 13/06/2024</p>
+                                                <p>Delivery Date: 17/06/2024</p>
+                                            </div>
+                                            <div class="item-price">
+                                                <p><strong>NPR. 400</strong></p>
+                                                <button class="buy-again-btn">Buy Again</button>
+                                            </div>
+                                        </div>
+                             </div>
+
+                    </div>        
+
                    
-            </div>
-            <div class="view-more">
-                <button class="btn">View More</button>
-            </div>
+                          
+         </section>
 
-        </div>
-
-        </section>
-
-            
-    </div>
+      </div>       
 </body>
 </html>
