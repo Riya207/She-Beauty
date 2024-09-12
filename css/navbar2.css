@@ -67,6 +67,23 @@ body .nav-data {
 .nav-icons a i{
     color:#000;
 }
+.nav-icons a .fa-solid{
+    position: relative;
+
+}
+.nav-icons a .cartAmount{
+    position:absolute;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: red;
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    top: -20px;
+    right: -14px;
+    padding:6px 10px;
+}
 .nav-icons .account a .login-text{
     font-size: 20px;
     font-weight: 500;

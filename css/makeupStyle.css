@@ -285,11 +285,29 @@ i.drop{
   padding: 10px 2px;
   background: #fff;
 }
-
-.product-content .btn-container .add-to-cart{
+.product-content .btn-container i{
+  width:20%;
+}
+.product-content .btn-container button{
+  width: 80%;
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 0.4em 4.6em;
+  padding: 0.4rem 4.6rem;
+  background: #7B7BFF;
+  border-radius: 0.8rem;
+  color:#fff;
+  cursor: pointer;
+  border:none;
+}
+.product-content .btn-container button:hover{
+  background: #7b7bffa7;
+}
+
+.product-content .btn-container .add-to-cart{
+  width: 80%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.4rem 4.6rem;
   background: #7B7BFF;
   border-radius: 0.8rem;
   color:#fff;
