@@ -325,3 +325,63 @@ body {
           
       }
       
+      @media (max-width: 768px) {
+        .profile-header {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .user-container {
+            width: 100%;
+        }
+    
+        .account-section {
+            flex-direction: column;
+        }
+    
+        .account-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    
+        .order-status, .order-summary {
+            width: 100%;
+        }
+    
+        .order-item {
+            flex-direction: column;
+        }
+    
+        .item-image img {
+            width: 80px;
+            height: 80px;
+        }
+    
+        .item-price p {
+            font-size: 18px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .profile-header {
+            padding: 10px;
+        }
+    
+        .profile-pic img {
+            width: 60px;
+            height: 60px;
+        }
+    
+        .order-status {
+            flex-direction: column;
+        }
+    
+        .status-button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    
+        .item-price p {
+            font-size: 16px;
+        }
+    }
