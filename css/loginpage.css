@@ -240,10 +240,10 @@
     
     @media (max-width: 480px) {
         .image-section{
-            height: 200px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center; 
+           height: 200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
         }
         .form-section {
             padding: 15px;

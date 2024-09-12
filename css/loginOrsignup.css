@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Roboto", sans-serif;
+      }
+      
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f3f3f3;
+      }
+      
+      .login-container {
+          display: flex;
+          width: 940px;
+          height: 570px;
+          background-color: white;
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+          border-radius: 5 0px;
+          overflow: hidden;
+          border-radius: 50px;
+          justify-content: center;
+          /* align-items: center; */
+      }
+     /* .box-container{
+          align-items: center;
+     } */
+      .sign-in{
+          z-index: 1000;
+      }
+      .sign-in-form{
+          background-color: #f9f7f7;
+          padding: 40px;
+          width: 350px;
+          height: 320px;
+          margin-top: 40px;
+          margin-bottom: 100px; ;
+          margin-left: 60px;
+          text-align: center;
+          border-radius: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+         
+      }
+      .sign-in h2{
+          font-size: 22px;
+          color: #333;
+          margin-top: 100px;
+          text-align: center;
+          margin-left: 50px;
+          /* margin-bottom: 20px; */
+          
+      }
+      .sign-in-form h3{
+          font-size: 22px;
+          color:#9d6abf ;
+          margin-top: -20px;
+          margin-bottom: 14px;
+      }
+      .sign-in-form input {
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ddd;
+          border-radius: 50px;
+          font-size: 14px;
+         
+          width: 250px;
+          
+      }
+      .forgot-password {
+          display: block;
+          margin-right: 5%;
+          text-align: right;
+          font-size: 12px;
+          color: #5c5a5a;
+          text-decoration: none;
+          margin-bottom: 20px;
+         text-decoration: underline;
+      }
+      .sign-in-btn {
+          width: 250px;
+          height: 40px;
+          padding: 12px;
+         text-align: center;
+          margin-top: -3%;
+          background-color: #3b82f6;
+          border: none;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          border-radius: 30px;
+          cursor: pointer;
+          margin-bottom: 5px;
+      }
+      .sign-in-btn:hover {
+          background-color: #326bc7;
+          transition: 0.3s;
+      }
+     
+      
+      .login-container p{
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          color: #1f1f1f;
+          font-size: 16px;
+          font-weight: 500;
+      }
+      
+      .social-login {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+          
+      }
+      .social-login button {
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          display: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 10px;
+          
+      }
+      
+      .google-btn img{
+        width: 26px;
+       
+       
+      }
+      
+      .facebook-btn img{
+        width: 28px;
+      
+      }
+      
+      .sign-up-container {
+          
+           background-color: #8e6ebf; 
+          padding: 40px;
+          width: 350px;
+          height: 450px;
+          margin-top: 80px;
+          margin-left: -5%;
+          text-align: center;
+          border-radius: 15px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          /* justify-content: center;
+          */
+      }
+      
+      .image-top img {
+          margin-top: -15%;
+          margin-left: -15% ;
+          transform: translateX(-50%);
+          width: 150px;
+      }
+      
+      .image-bottom {
+          margin-top: 30px;
+      }
+      
+      .image-bottom img {
+          width: 150px;
+          margin-right: -60%;
+          margin-bottom: -42%;
+          
+      }
+      .text{
+          text-align: center;
+          margin-top: 25px;
+      }
+      h2 {
+          font-size: 24px;
+          color: #fff;
+          margin-bottom: 20px;
+      }
+      
+      .sign-up-container p {
+          font-size: 16px;
+          color: #fff;
+          margin-bottom: 30px;
+      }
+      
+      .sign-up-btn {
+          width: 250px;
+          background-color: #f9f7e7;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 25px;
+          color: #333;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .sign-up-btn:hover {
+          background-color: #f8f4d5;
+          transition: 0.3s;
+      }
+      @media (max-width: 768px) {
+          /* For tablets and smaller devices */
+          .login-container {
+              flex-direction: column; /* Stack sign-in and sign-up vertically */
+              align-items: center;
+              padding: 10px;
+              overflow: none;
+          }
+      
+          .sign-in, .sign-up-container {
+              width: 90%;
+              margin: 10px 0;
+          }
+      
+          .sign-in-form, .sign-up-container {
+              width: 100%;
+              max-width: 350px;
+          }
+      }
+      
+      @media (max-width: 480px) {
+          /* For mobile devices */
+          body {
+              padding: 10px;
+          }
+      
+          .sign-in h2, .sign-up-container h2 {
+              font-size: 18px;
+          }
+      
+          .sign-in-form h3 {
+              font-size: 18px;
+          }
+      
+          .sign-in-form input {
+              padding: 8px;
+          }
+      
+          .sign-in-btn, .sign-up-btn {
+              padding: 10px;
+              font-size: 14px;
+          }
+      
+          .google-btn img, .facebook-btn img {
+              width: 20px;
+          }
+      
+          .image-top img, .image-bottom img {
+              width: 100px;
+          }
+      }
+
+      @media (max-width: 480px) {
+          body {
+              padding: 10px;
+          }
+      
+          .login-container {
+              flex-direction: column; /* Stack elements vertically */
+              width: 100%; /* Ensure container takes full width */
+              padding: 10px;
+          }
+      
+          .sign-in, .sign-up-container {
+              width: 100%;
+              margin: 10px 0;
+          }
+      
+          .sign-in-form, .sign-up-container {
+              padding: 10px;
+              box-shadow: none; /* Reduce shadows on smaller screens */
+          }
+      
+          .sign-in h2, .sign-up-container h2 {
+              font-size: 18px;
+          }
+      
+          .sign-in-form h3 {
+              font-size: 16px;
+          }
+      
+          .sign-in-form input {
+              width: 100%; /* Ensure inputs take full width */
+              padding: 8px;
+              font-size: 14px;
+          }
+      
+          .sign-in-btn, .sign-up-btn {
+              width: 100%; /* Full-width buttons */
+              padding: 10px;
+              font-size: 14px;
+          }
+      
+          .forgot-password {
+              font-size: 10px;
+              margin-bottom: 10px;
+          }
+      
+          .social-login button {
+              padding: 5px;
+          }
+      
+          .google-btn img, .facebook-btn img {
+              width: 20px;
+          }
+      
+          /* Adjust image sizes */
+          .image-top img, .image-bottom img {
+              width: 80px;
+          }
+      
+          .image-top img {
+              margin-top: -10px;
+          }
+      
+          .image-bottom img {
+              margin-right: 0;
+          }
+      
+          h2 {
+              font-size: 18px;
+          }
+      
+          .sign-up-container p {
+              font-size: 14px;
+          }
+      }
+     
