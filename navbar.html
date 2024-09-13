@@ -36,7 +36,7 @@
 
       <div class="nav-icons">
         <div class="account">
-          <a href="login.html">
+          <a href="#" id="login-icon">
             <span class="login-text">Login</span>
             <!-- <span class="material-symbols-outlined">account_circle</span></a -->
             <!-- > -->
@@ -131,7 +131,34 @@
         </li>
       </ul>
     </div>
+ 
+ 
 
-    <script src="search_result.js"></script>
+     <script>
+      
+        const loginIcon = document.getElementById('login-icon');
+        const token = localStorage.getItem('token');
+    
+        console.log('Token:', token);
+    
+        loginIcon.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent default link behavior
+          console.log('Login icon clicked');
+          
+          // Check the token value before redirecting
+          if (token && token.trim() !== '') {
+            console.log('User is logged in. Redirecting to userpage.');
+            window.location.href = 'userpage.html'; // Redirect to user dashboard
+          } else {
+            console.log('User is not logged in. Redirecting to loginOrsignup.');
+            window.location.href = 'loginOrsignup.html'; // Redirect to login page
+          }
+        });
+      
+    </script> 
+    
+
+  <script src="search_result.js" defer></script>
+
   </body>
 </html>

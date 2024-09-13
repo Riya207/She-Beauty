@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
-    <link rel="stylesheet" href="/css/loginpage.css">
+    <link rel="stylesheet" href="./css/loginpage.css">
     
 </head>
 <body>
     <div class="container">
         <div class="image-section">
-            <img src="/image/loginimage.png" alt="Login Image" />
+            <img src="./image/loginimage.png" alt="Login Image" />
         </div>
         
      
         <div class="form-section">
             <p>Start transforming the way you shop for makeup!</p>
-            <form class="signup-form">
+            <form class="signup-form" id="sign-up">
                 <h3>Create Account</h3>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="password" placeholder="Password" required>
+                <input type="text" id="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
                 <div class="terms">
                     <input type="checkbox" id="agree" required>
                     <label for="agree">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
                 </div>
+
                 <button type="submit" class="signup-btn">SIGN UP</button>
-                <p>Already have an account? <a href="#">Sign in</a></p>
+                <p>Already have an account? <a href="loginOrsignup.html">Sign in</a></p>
                 <div class="social-login">
                     <p>OR</p>
-                    <button class="google-btn"><img src="/image/googlelogo.png" alt="googlelogo"></i>Continue with Google</button>
-                    <button class="facebook-btn"><img src="/image/facebooklogo.png" alt="facebooklogo"></i>Continue with Facebook</button>
+                    <button class="google-btn"><img src="./image/googlelogo.png" alt="googlelogo"></i>Continue with Google</button>
+                    <button class="facebook-btn"><img src="./image/facebooklogo.png" alt="facebooklogo"></i>Continue with Facebook</button>
                 </div>
             </form>
         </div>
@@ -39,5 +40,6 @@
 
 
     </div>
+    <script type="text/javascript" src="./script/signup.js"></script>
 </body>
 </html>
