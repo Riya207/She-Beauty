@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She Beauty - Products List</title>
+    <link rel="stylesheet" href="./css/productDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./image/logo.png" alt="She Beauty">
+        </div>
+        <div class="user-actions">
+            <button><i class="fas fa-search"></i></button>
+            <button><i class="fas fa-envelope"></i></button>
+            <div class="adminSign">
+                
+                <button><i class="fas fa-user"></i></button>
+                <div class="user-info">
+                    <span class="user-name">Saira Karim</span>
+                    <span class="user-email">sairakrim97@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- <div class="goDashboard">
+        <a href=""> Dashboard</a>
+    </div> -->
+    
+    <main>
+            <div class="container">
+            <h1>Products List</h1>
+            <div class="buttons">
+                <button onclick="scrollToSection('makeup-products')">Makeup</button>
+                <button onclick="scrollToSection('skin-products')">Skin</button>
+                <button onclick="scrollToSection('hair-products')">Hair</button>
+                <button onclick="scrollToSection('body-products')">Body</button>
+            </div>
+
+            <section id="makeup-products" class="product-section">
+                <h2>Makeup products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#222</td>
+                            <td>Face pack</td>
+                            <td>Mamaearth</td>
+                            <td><img src="./image/mproduct1.png" alt="Face pack"></td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>#223</td>
+                            <td>Lip balm</td>
+                            <td>Himalaya</td>
+                            <td><img src="./image/mproduct2.png" alt="Lip balm"></td>
+                            <td>389</td>
+                        </tr>
+                        <tr>
+                            <td>#224</td>
+                            <td>Kajal</td>
+                            <td>Himalaya</td>
+                            <td><img src="./image/meye1.png" alt="Kajal"></td>
+                            <td>456</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="skin-products" class="product-section">
+                <h2>Skin products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#122</td>
+                            <td>Sunscream</td>
+                            <td>Derma</td>
+                            <td><img src="./image/sproduct1.png" alt="Sunscream"></td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>#284</td>
+                            <td>Cream</td>
+                            <td>Asta Berry</td>
+                            <td><img src="./image/sproduct2.png" alt="Kajal"></td>
+                            <td>456</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="hair-products" class="product-section">
+                <h2>Hair products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#122</td>
+                            <td>Shampoo</td>
+                            <td>Dove</td>
+                            <td><img src="./image/shampoo1.png" alt="Sunscream"></td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>#343</td>
+                            <td>Hair oil</td>
+                            <td>Asta Berry</td>
+                            <td><img src="./image/hproduct2.png" alt="Lip balm"></td>
+                            <td>389</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="body-products" class="product-section">
+                <h2>Body products</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#122</td>
+                            <td>Lotion</td>
+                            <td>Vaseline</td>
+                            <td><img src="./image/bproduct1.png" alt="Sunscream"></td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>#284</td>
+                            <td>Scent</td>
+                            <td>Renee</td>
+                            <td><img src="./image/bproduct2.png" alt="Kajal"></td>
+                            <td>456</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
