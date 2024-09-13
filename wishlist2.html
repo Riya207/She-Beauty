@@ -6,8 +6,38 @@
           <title>Wishlist Added</title>
           <link rel="stylesheet" href="/css/wishlist2.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+          <script>
+            function includeHTML() {
+              var z, i, elmnt, file, xhttp;
+              z = document.getElementsByTagName("*");
+              for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("she-website-html");
+                if (file) {
+                  xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                      if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                      if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                      elmnt.removeAttribute("she-website-html");
+                      includeHTML();
+                    }
+                  }      
+                  xhttp.open("GET", file, true);
+                  xhttp.send();
+                  return;
+                }
+              }
+            }
+        </script>
+
 </head>
 <body>
+
+    <div she-website-html="../navbar.html"></div>
+
+
           <section class="profile-header">
                     <div class="profile-info">
                               <div class="profile-pic">
@@ -92,5 +122,24 @@
 
             
     </div>
+
+     <!-- -------------- ------------------------ to include html files ----------------------------------------------------  -->
+      <script>
+        function toggleContent(id) {
+          var content = document.getElementById(id);
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        }
+      </script>
+      <div she-website-html="../services.html"></div>
+      
+      <div she-website-html="../footer.html"></div>
+      <script>
+        includeHTML();
+      </script>
+
 </body>
 </html>

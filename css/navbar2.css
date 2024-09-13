@@ -55,18 +55,24 @@ body .nav-data {
 }
 
 .nav-icons {
+    color:#1f1e1e;
+
     /* border: 2px solid darkblue; */
-    width: 12%;
+    width: 10%;
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    gap:10px;
+    /* justify-content: space-between; */
     /* padding: 20px 0; */
 }
+.nav-icons span{
+    font-size: 16px;
+}
 .nav-icons .account a i{
-    color:#000;
+    color:#272525;
 }
 .nav-icons a i{
-    color:#000;
+    color:#2f2e2e;
 }
 .nav-icons a .fa-solid{
     position: relative;
@@ -182,7 +188,7 @@ body .nav-data {
 }
 
 .header ul li a {
-    color: #000;
+    color: #1e1d1d;
     text-decoration: none;
     font-size: 20px;
     transition: all 0.3s;

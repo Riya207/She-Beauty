@@ -79,6 +79,10 @@
     border-radius: 6px;
     outline: none;
 }
+label{
+    font-weight: 500;
+    color:#292828;
+}
 
 /* #################################try ################################# */
 
@@ -193,8 +197,11 @@
 }
 
 @media (max-width: 600px) {
+    .tabs {
+        width: 90%;
+    }
     .tab-button {
-        font-size: 14px;
+        font-size: 16px;
         padding: 8px;
     }
     
@@ -204,13 +211,20 @@
 }
 
 @media (min-width: 768px) {
+    .tabs {
+        width: 60%;
+    }
     .product-container {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 @media (max-width: 767px) {
-    
+    .tabs {
+        width: 60%;
+        /* display: flex; */
+        /* border-bottom: 1px solid #dfdfe670; */
+    }
     .product-image {
         border: 1px solid #CCCCFF;
         border-radius: 6px;
