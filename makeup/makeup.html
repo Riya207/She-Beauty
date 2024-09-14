@@ -86,7 +86,7 @@
 
       <div class="nav-icons">
         <div class="account">
-          <a href="login.html">
+          <a href="../loginOrsignup.html">
             <span class="login-text">Login</span>
             <!-- <span class="material-symbols-outlined">account_circle</span></a -->
             <!-- > -->
@@ -578,7 +578,7 @@
 
     <div she-website-html="../services.html"></div>
 
-    <div she-website-html="../footer.html"></div>
+    <div she-website-html="./footer.html"></div>
 
     <script>
       includeHTML();
@@ -603,5 +603,40 @@
     <!-- <script src="../data.js"></script>
 <script src="../script/makeupCart.js"></script> -->
     <script src="search_result.js"></script>
+
+
+    <script>
+      // Assuming each product has a unique id
+document.querySelectorAll('.add-to-cart').forEach(function (cartButton) {
+  cartButton.addEventListener('click', function () {
+    const productElement = this.closest('.product');
+    
+    const product = {
+      id: productElement.dataset.id,
+      name: productElement.querySelector('.brand-name h3').innerText,
+      price: productElement.querySelector('.price p').innerText,
+      imageUrl: productElement.querySelector('.img-holder img').src,
+    };
+
+    // Send product data to the server using Fetch API
+    fetch('/add-to-cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(product),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Product added to cart:', data);
+      })
+      .catch(error => {
+        console.error('Error adding product to cart:', error);
+      });
+  });
+});
+
+    </script>
+
   </body>
 </html>

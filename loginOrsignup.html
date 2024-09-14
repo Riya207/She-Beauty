@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In/Sign Up</title>
-    <link rel="stylesheet" href="/css/loginOrsignup.css">
+    <link rel="stylesheet" href="./css/loginOrsignup.css">
 
 </head>
 <body>
@@ -12,11 +12,11 @@
    
         <div class="sign-in">
             <h2>WELCOME BACK!</h2>
-            <div class="sign-in-form">
+            <div class="sign-in-form" id="signin">
             <h3>SIGN IN</h3>
             <form>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
                 <a href="#" class="forgot-password">Forgot your password?</a>
                 <button type="submit" class="sign-in-btn">SIGN IN</button>
              </form>
@@ -30,21 +30,25 @@
 
       <div class="sign-up-container">
           <div class="image-top">
-              <img src="/image/tote.png" alt="Top Image">
+              <img src="./image/tote.png" alt="Top Image">
           </div>
           <div class="text">
           <h2>NEW HERE?</h2>
           <p>Sign up to get the wide range of beauty products</p>
           </div>
-          <button class="sign-up-btn">SIGN UP</button>
+          <a href="./loginpage.html">
+
+              <button class="sign-up-btn">SIGN UP</button>
+          </a>
           <div class="image-bottom">
-              <img src="/image/makeover.png" alt="Bottom Image">
+              <img src="./image/makeover.png" alt="Bottom Image">
           </div>
       </div>
    
    
 </div>
 
+<script src="./script/login.js"></script>
 
 </body>
 </html>
