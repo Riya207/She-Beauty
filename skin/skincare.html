@@ -368,6 +368,21 @@
         </section>
     </div>
 
+    <!-- -----------------------------  for the heart effect ====================================================== -->
+
+    <script>
+        document.querySelectorAll(".fa-heart").forEach(function (heart) {
+            heart.addEventListener("click", function () {
+                // Toggle between solid and regular heart
+                this.classList.toggle("fa-solid");
+                this.classList.toggle("fa-regular");
+                this.style.color = "red"; // Change color to red when clicked
+            });
+        });
+    </script>
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+
     
     <script>
         function toggleContent(id) {
@@ -379,6 +394,23 @@
             }
         }
     </script>
+
+<!-- ======================================= link to product description page ======================================= -->
+
+<script>
+    // Select all img-holder divs
+    document.querySelectorAll(".img-holder").forEach(function (imgHolder) {
+      imgHolder.addEventListener("click", function () {
+        // Get the link from the data-link attribute
+        const link = this.getAttribute("data-link");
+        // Redirect to the specified link
+        window.location.href = "../product description.html";
+      });
+    });
+  </script>
+
+  <!-- =================================================================================================================== -->
+
             <div she-website-html="../services.html"></div>
 
 <div she-website-html="../footer.html"></div>

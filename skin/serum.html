@@ -6,54 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serum-Category</title>
     <link rel="stylesheet" href="../css/navbar2.css" />
-     <!-- <link rel="stylesheet" href="./css/navbar2.css"> -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto-Light:wght@300&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./css/navbar2.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto-Light:wght@300&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/3c507479c7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/eyes.css">
     <script src="../script/makeupjs.js" defer></script>
     <script>
         function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /*loop through a collection of all HTML elements:*/
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("she-website-html");
-            if (file) {
-              /*make an HTTP request using the attribute value as the file name:*/
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /*remove the attribute, and call this function once more:*/
-                  elmnt.removeAttribute("she-website-html");
-                  includeHTML();
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("she-website-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("she-website-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
                 }
-              }      
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /*exit the function:*/
-              return;
             }
-          }
         };
-        </script>
+    </script>
 </head>
 
 <body>
 
     <div she-website-html="../navbar.html"></div>
-    
+
 
     <!-- =============================================== after navbar ================================================= -->
 
@@ -154,17 +151,17 @@
                     <div class="right">
                         <div class="sort-header">
                             <span>Sort By</span>
-                          
-                                <span>
-    
-                                    <!-- <input type="checkbox" name="" id="toggle"> -->
-                                    <i class="fa-solid fa-chevron-down drop"></i>
-                                </span>
-    
-                            
-    
+
+                            <span>
+
+                                <!-- <input type="checkbox" name="" id="toggle"> -->
+                                <i class="fa-solid fa-chevron-down drop"></i>
+                            </span>
+
+
+
                         </div>
-    
+
                         <ul class="sort-price">
                             <li class="low-to-high">Price: Low to High</li>
                             <li class="high-to-low">Price: High to Low</li>
@@ -173,104 +170,158 @@
                 </div>
                 <div class="products-container">
                     <div class="product product1">
-                        <div class="img-holder"><img src="../image/cleanser1.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/cleanser1.png" alt="">
+                            <p class="offer"></p>
+                        </div>
                         <div class="product-content">
-                            <div class="brand-name"><h3>Derma</h3></div>
-                            <div class="item-detail"><p>Derma Co. 3% AHA+BHA Foaming Facial Wash 100ml</p></div>
+                            <div class="brand-name">
+                                <h3>Derma</h3>
+                            </div>
+                            <div class="item-detail">
+                                <p>Derma Co. 3% AHA+BHA Foaming Facial Wash 100ml</p>
+                            </div>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="avg-rating">4.7/5</span>
                                 <span class="count">(5)</span>
                             </div>
-                            <div class="price"><p>NPR. 520</p></div>
+                            <div class="price">
+                                <p>NPR. 520</p>
+                            </div>
                             <div class="btn-container">
                                 <i class="fa-regular fa-heart fa-3x"></i>
                                 <div class="add-to-cart">Add to Cart</div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="product product2">
-                        <div class="img-holder"><img src="../image/cleanser2.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/cleanser2.png" alt="">
+                            <p class="offer"></p>
+                        </div>
                         <div class="product-content">
-                            <div class="brand-name"><h3>Astaberry</h3></div>
-                            <div class="item-detail"><p>Astaberry Gold Cleansing Milk-100ml</p></div>
+                            <div class="brand-name">
+                                <h3>Astaberry</h3>
+                            </div>
+                            <div class="item-detail">
+                                <p>Astaberry Gold Cleansing Milk-100ml</p>
+                            </div>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="avg-rating">4.5/5</span>
                                 <span class="count">(6)</span>
                             </div>
-                            <div class="price"><p>NPR. 130</p></div>
+                            <div class="price">
+                                <p>NPR. 130</p>
+                            </div>
                             <div class="btn-container">
                                 <i class="fa-regular fa-heart fa-3x"></i>
                                 <div class="add-to-cart">Add to Cart</div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="product product3">
-                        <div class="img-holder"><img src="../image/cleanser3.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/cleanser3.png" alt="">
+                            <p class="offer"></p>
+                        </div>
                         <div class="product-content">
-                            <div class="brand-name"><h3>Olay</h3></div>
-                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="brand-name">
+                                <h3>Olay</h3>
+                            </div>
+                            <div class="item-detail">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="avg-rating">4.5/5</span>
                                 <span class="count">(6)</span>
                             </div>
-                            <div class="price"><p>NPR. 470</p></div>
+                            <div class="price">
+                                <p>NPR. 470</p>
+                            </div>
                             <div class="btn-container">
                                 <i class="fa-regular fa-heart fa-3x"></i>
                                 <div class="add-to-cart">Add to Cart</div>
                             </div>
                         </div>
-                       
+
                     </div>
 
                     <div class="product product4">
-                        <div class="img-holder"><img src="../image/cleanser4.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/cleanser4.png" alt="">
+                            <p class="offer"></p>
+                        </div>
                         <div class="product-content">
-                            <div class="brand-name"><h3>CeraVe</h3></div>
-                            <div class="item-detail"><p>CeraVe Foaming Facial Cleanser - 87ml</p></div>
+                            <div class="brand-name">
+                                <h3>CeraVe</h3>
+                            </div>
+                            <div class="item-detail">
+                                <p>CeraVe Foaming Facial Cleanser - 87ml</p>
+                            </div>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="avg-rating">4.5/5</span>
                                 <span class="count">(6)</span>
                             </div>
-                            <div class="price"><p>NPR. 900</p></div>
+                            <div class="price">
+                                <p>NPR. 900</p>
+                            </div>
                             <div class="btn-container">
                                 <i class="fa-regular fa-heart fa-3x"></i>
                                 <div class="add-to-cart">Add to Cart</div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="product product5">
-                        <div class="img-holder"><img src="../image/face2.png" alt=""><p class="offer"></p></div>
+                        <div class="img-holder"><img src="../image/face2.png" alt="">
+                            <p class="offer"></p>
+                        </div>
                         <div class="product-content">
-                            <div class="brand-name"><h3>Mamaearth</h3></div>
-                            <div class="item-detail"><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                            <div class="brand-name">
+                                <h3>Mamaearth</h3>
+                            </div>
+                            <div class="item-detail">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                            </div>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="avg-rating">4.5/5</span>
                                 <span class="count">(6)</span>
                             </div>
-                            <div class="price"><p>NPR. 532</p></div>
+                            <div class="price">
+                                <p>NPR. 532</p>
+                            </div>
                             <div class="btn-container">
                                 <i class="fa-regular fa-heart fa-3x"></i>
                                 <div class="add-to-cart">Add to Cart</div>
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
                 <div class="view-more">
                     <button class="btn">View More</button>
                 </div>
             </div>
-            
+
         </section>
     </div>
+    <!-- -----------------------------  for the heart effect ====================================================== -->
+
+    <script>
+        document.querySelectorAll(".fa-heart").forEach(function (heart) {
+            heart.addEventListener("click", function () {
+                // Toggle between solid and regular heart
+                this.classList.toggle("fa-solid");
+                this.classList.toggle("fa-regular");
+                this.style.color = "red"; // Change color to red when clicked
+            });
+        });
+    </script>
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
     <script>
         function toggleContent(id) {
             var content = document.getElementById(id);
@@ -280,14 +331,30 @@
                 content.style.display = "block";
             }
         }
-        </script>
-            <div she-website-html="../services.html"></div>
-        
-            <div she-website-html="../footer.html"></div>
-            
-            <script>
-                includeHTML();
-                </script>
+    </script>
+
+    <!-- ======================================= link to product description page ======================================= -->
+
+    <script>
+        // Select all img-holder divs
+        document.querySelectorAll(".img-holder").forEach(function (imgHolder) {
+            imgHolder.addEventListener("click", function () {
+                // Get the link from the data-link attribute
+                const link = this.getAttribute("data-link");
+                // Redirect to the specified link
+                window.location.href = "../product description.html";
+            });
+        });
+    </script>
+
+    <!-- =================================================================================================================== -->
+    <div she-website-html="../services.html"></div>
+
+    <div she-website-html="../footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>

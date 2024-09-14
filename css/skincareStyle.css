@@ -232,6 +232,7 @@ i.drop{
   width: 250px;
   border-radius: 0.8rem;
   border: 2px solid #CCCCFF;
+  padding: 0 8px;
   box-shadow:  0 0 10px rgba(0, 0, 0, 0.151);;
 }
 .product .img-holder img{
@@ -272,7 +273,7 @@ i.drop{
   font-size: 1rem;
 }
 .product-content .price p{
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   color:#B21CE6;
   margin: 4px 0;
@@ -284,14 +285,15 @@ i.drop{
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 10px 2px;
+  padding: 10px;
   background: #fff;
 }
 
 .product-content .btn-container .add-to-cart{
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 0.4em 4.6em;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   background: #7B7BFF;
   border-radius: 0.8rem;
   color:#fff;
@@ -312,7 +314,6 @@ i.drop{
   cursor: pointer;
 }
 .view-more{
-  /* background-color: red; */
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -342,9 +343,7 @@ i.drop{
   .products-container .product{
     width: 162px;
   }
-  .product-content .btn-container .add-to-cart{
-    padding: 0.3em 3.5em;
-  }
+
 }
 @media(min-width:501px) and (max-width:750px){
   html{
@@ -366,9 +365,7 @@ i.drop{
   .products-container .product{
     width: 170px;
   }
-  .product-content .btn-container .add-to-cart{
-    padding: 0.2em 3em;
-  }
+
 }
 @media(min-width:751px) and (max-width:800px){
   html{
@@ -383,9 +380,7 @@ i.drop{
   .products-container .product{
     width: 200px;
   }
-  .product-content .btn-container .add-to-cart{
-    padding: 0.3em 3.5em;
-  }
+
 }
 
 
@@ -396,9 +391,7 @@ i.drop{
   .main-section .products{
     width: 68%;
   }
-  .product-content .btn-container .add-to-cart{
-    padding: 0.3em 3.5em;
-  }
+
   .products-container .product{
     width: 220px;
   }

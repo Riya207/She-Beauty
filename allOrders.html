@@ -5,8 +5,47 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>All Orders</title>
           <link rel="stylesheet" href="/css/allOrders.css">
+
+          <script>
+            function includeHTML() {
+              var z, i, elmnt, file, xhttp;
+              /*loop through a collection of all HTML elements:*/
+              z = document.getElementsByTagName("*");
+              for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("she-website-html");
+                if (file) {
+                  /*make an HTTP request using the attribute value as the file name:*/
+                  xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                      if (this.status == 200) {
+                        elmnt.innerHTML = this.responseText;
+                      }
+                      if (this.status == 404) {
+                        elmnt.innerHTML = "Page not found.";
+                      }
+                      /*remove the attribute, and call this function once more:*/
+                      elmnt.removeAttribute("she-website-html");
+                      includeHTML();
+                    }
+                  };
+                  xhttp.open("GET", file, true);
+                  xhttp.send();
+                  /*exit the function:*/
+                  return;
+                }
+              }
+            }
+          </script>
+
 </head>
 <body>
+
+    <div she-website-html="../navbar.html"></div>
+
+
           <section class="profile-header">
                     <div class="profile-info">
                               <div class="profile-pic">
@@ -34,10 +73,10 @@
                     <div class="account-box">
                               <h2>My Account</h2>
                               <ul>
-                                        <li><a href="#"><i class="fa-solid fa-user"></i>  Personal Information</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-location-dot"></i>  My Address</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-user-lock"></i>  Security and Privacy</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-box-open"></i>  My Orders</a></li>
+                                        <li><a href="./userpage.html"><i class="fa-solid fa-user"></i>  Personal Information</a></li>
+                                        <li><a href="./address.html"><i class="fa-solid fa-location-dot"></i>  My Address</a></li>
+                                        <li><a href="./securityandPrivacy.html"><i class="fa-solid fa-user-lock"></i>  Security and Privacy</a></li>
+                                        <li><a href="./allOrders.html"><i class="fa-solid fa-box-open"></i>  My Orders</a></li>
                                         <li><a href="#"><i class="fa-regular fa-credit-card"></i>  Payment Methods</a></li>
                                         <li><a href="#"><i class="fa-solid fa-heart"></i>  Wishlist</a></li>
                                         <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>  Signout</a></li>
@@ -108,6 +147,25 @@
                           
          </section>
 
-      </div>      
+      </div>  
+      
+      <!-- -------------- ------------------------ to include html files ---------------------------------------------------- -->
+    <script>
+        function toggleContent(id) {
+          var content = document.getElementById(id);
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        }
+      </script>
+      <div she-website-html="../services.html"></div>
+      
+      <div she-website-html="../footer.html"></div>
+      <script>
+        includeHTML();
+      </script>
+      
 </body>
 </html>
