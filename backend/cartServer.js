@@ -7,6 +7,7 @@ const port = 3000;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
+app.use(cors());          // Allow cross-origin requests
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/shebeauty', { useNewUrlParser: true, useUnifiedTopology: true })
