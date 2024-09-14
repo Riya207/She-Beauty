@@ -93,6 +93,31 @@
 
     <script src="./script/product-page.js"></script>
     <script src="./script/cartPage.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  fetch('/cart')
+    .then(response => response.json())
+    .then(cartItems => {
+      const cartContainer = document.querySelector('.cart-items');
+      cartItems.forEach(item => {
+        const cartItemHTML = `
+          <div class="cart-item">
+            <img src="${item.imageUrl}" alt="${item.name}">
+            <div class="cart-item-details">
+              <h3>${item.name}</h3>
+              <p>${item.price}</p>
+            </div>
+          </div>
+        `;
+        cartContainer.innerHTML += cartItemHTML;
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching cart items:', error);
+    });
+});
+
+    </script>
 </body>
 </html>
 
