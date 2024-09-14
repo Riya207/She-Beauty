@@ -28,7 +28,7 @@ document.getElementById('signin').addEventListener('submit', async (event) => {
             if (data.role === 'admin') {
                 window.location.href = 'admin-dashboard.html';
             } else {
-                window.location.href = '../She-Beauty/index.html';
+                window.location.href = '../She-Beauty/userpage.html';
             }
         } else {
             alert(data.message || 'Login failed!');
