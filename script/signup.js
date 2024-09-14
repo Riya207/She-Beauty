@@ -20,7 +20,7 @@ document.getElementById('sign-up').addEventListener('submit', async (event) => {
 
         if (response.ok) {
             alert('Signup successful!');
-            window.location.href = '../She-Beauty/loginOrsignup.html'; // Redirect to login page
+            window.location.href = './loginOrsignup.html'; // Redirect to login page
         } else {
             alert(data.message || 'Signup failed!');
         }
