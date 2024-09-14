@@ -9,7 +9,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/sheBeauty', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/shebeauty', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
@@ -41,6 +41,7 @@ app.post('/add-to-cart', (req, res) => {
 
 // Route to fetch cart items
 app.get('/cart', (req, res) => {
+  console.log('Fetching cart items...');
   CartItem.find()
     .then(items => {
       res.json(items);
